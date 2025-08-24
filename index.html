@@ -10,7 +10,7 @@
 <body>
 <div class="container">
   <img src="./img/rota-banner.png" alt="Community Patch Banner" class="header-img">
-  <!-- Navigation placeholder -->
+  <!-- Nav Menu -->
   <div id="nav-placeholder"></div>
 
     <div class="news-box">
@@ -25,7 +25,9 @@
     fetch("includes/nav.html")
       .then(response => response.text())
       .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+        const nav = document.getElementById("nav-placeholder");
+        nav.innerHTML = data;
+        nav.classList.add("loaded"); // show nav after insertion
       });
   </script>
 
@@ -41,6 +43,6 @@
     backToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  </script> 
+  </script>
 </body>
 </html>
