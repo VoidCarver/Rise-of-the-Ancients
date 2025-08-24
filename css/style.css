@@ -24,6 +24,22 @@
       border-radius: 10px; /* Optional: rounded edges to match theme */
     }
 
+    .news-box .rota-avatar {
+      display: block;       /* makes it behave like a block element */
+      margin: 0 auto 16px;  /* centers it horizontally + space below */
+      max-width: 150px;     /* optional: control size */
+      height: auto;         /* keeps aspect ratio */
+      border-radius: 8px;   /* optional: rounded corners */
+    }
+
+    .news-box .aoe2-logo {
+      display: block;       /* makes it behave like a block element */
+      margin: 0 auto 16px;  /* centers it horizontally + space below */
+      max-width: 150px;     /* optional: control size */
+      height: auto;         /* keeps aspect ratio */
+      border-radius: 8px;   /* optional: rounded corners */
+    }
+
     h1 {
       color: #ffffff;
       text-align: center;
@@ -35,7 +51,19 @@
     }
 
     h3 {
+      font-size: 1rem;
+      color: #ff9966;
+      text-align: center; 
+    }
+
+    h4 {
       color: #ffcc66;
+    }
+
+    h5 {
+      font-size: 1rem;
+      color: #ffffff;
+      text-align: center;
     }
 
     details {
@@ -57,7 +85,7 @@
 
     .news-box {
       background: #1f2535;        /* same as nav background */
-      border: 1px solid #ffcc66;  /* gold border */
+      /* border: 1px solid #ffcc66; */  /* gold border */
       border-radius: 8px;         /* rounded corners */
       padding: 16px 20px;
       margin: 20px auto;
