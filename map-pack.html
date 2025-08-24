@@ -12,7 +12,7 @@
   <img src="./img/rota-banner.png" alt="Community Patch Banner" class="header-img">
   <!-- Nav Menu -->
   <div id="nav-placeholder"></div>
-  
+
     <h1>ROR Community Map Pack</h1>
     <ul>      
       <li>The mod can be found on 
@@ -176,7 +176,9 @@
     fetch("includes/nav.html")
       .then(response => response.text())
       .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+        const nav = document.getElementById("nav-placeholder");
+        nav.innerHTML = data;
+        nav.classList.add("loaded"); // show nav after insertion
       });
   </script>
 
@@ -192,6 +194,6 @@
     backToTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  </script>  
+  </script>
 </body>
 </html>
