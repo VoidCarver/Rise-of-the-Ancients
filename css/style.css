@@ -99,6 +99,11 @@
     }
     
     /* --- NAV MENU STYLING --- */
+    #nav-placeholder {
+      min-height: 35px; /* match your nav height */
+      background-color: #171c28;
+    }
+
     .nav {
       background: #1f2535;
       font-family: Arial, sans-serif;
