@@ -12,7 +12,7 @@
   <img src="./img/rota-banner.png" alt="Community Patch Banner" class="header-img">
   <!-- Nav Menu -->
   <div id="nav-placeholder"></div>
-  
+
     <h1>ROR Community Patch BETA</h1>
     <ul>
         <li><strong>Currently Under Development</strong></li>
@@ -453,7 +453,9 @@
     fetch("includes/nav.html")
       .then(response => response.text())
       .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+        const nav = document.getElementById("nav-placeholder");
+        nav.innerHTML = data;
+        nav.classList.add("loaded"); // show nav after insertion
       });
   </script>
 
