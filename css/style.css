@@ -46,13 +46,13 @@
     }
 
     h2 {
-      color: #ffcc66;
+      color: #ff9966;
       text-align: center;
     }
 
     h3 {
-      font-size: 1rem;
-      color: #ff9966;
+      font-size: 1rem; 
+      color: #ffcc66;
       text-align: center; 
     }
 
@@ -61,7 +61,7 @@
     }
 
     h5 {
-      font-size: 1rem;
+      font-size: 1rem; 
       color: #ffffff;
       text-align: center;
     }
@@ -104,11 +104,11 @@
     }
 
     strong {
-      color: #ff9966;
+      color: #ffcc66;
     }
 
     li::marker {
-      color: #ff9966;
+      color: #ffcc66;
     }
 
     .previous {
