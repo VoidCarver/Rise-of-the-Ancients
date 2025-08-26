@@ -213,7 +213,7 @@
       position: fixed;
       bottom: 45px;
       /* right:20px; */
-      left: calc(50% + 420px); /* 50% centers it, +420px pushes to container edge */    
+      left: calc(50% + 350px); /* 50% centers it, +XXpx pushes to container edge */    
       background: #ffcc66;
       color: #1f2535;
       border: none;
@@ -234,9 +234,9 @@
     content: "Back to Top";
     position: absolute;
     top: 110%;           /* place it below the button */
-    left: 50%;           /* center horizontally */
+    left: 40%;           /* center horizontally */
     transform: translateX(-50%); /* adjust for centering */    
-    background: #1f2535;
+    /*  background: #1f2535; */
     color: #ffcc66;
     padding: 4px 8px;
     border-radius: 4px;
