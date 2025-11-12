@@ -1,0 +1,257 @@
+    html {
+      overflow-y: scroll; /* Always show vertical scrollbar */
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background: #171c28;
+      margin: 0;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto; /* centers container horizontally */
+    }
+
+    .header-img {
+      width: 100%;
+      max-width: 800px; /* match container width */
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px; /* Optional: rounded edges to match theme */
+    }
+
+    .news-box .rota-avatar {
+      display: block;       /* makes it behave like a block element */
+      margin: 0 auto 16px;  /* centers it horizontally + space below */
+      max-width: 150px;     /* optional: control size */
+      height: auto;         /* keeps aspect ratio */
+      border-radius: 8px;   /* optional: rounded corners */
+    }
+
+    .news-box .aoe2-logo {
+      display: block;       /* makes it behave like a block element */
+      margin: 0 auto 16px;  /* centers it horizontally + space below */
+      max-width: 150px;     /* optional: control size */
+      height: auto;         /* keeps aspect ratio */
+      border-radius: 8px;   /* optional: rounded corners */
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ff9966;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1rem; 
+      color: #ffcc66;
+      text-align: center; 
+    }
+
+    h4 {
+      color: #ffcc66;
+    }
+
+    h5 {
+      font-size: 1rem; 
+      color: #ffffff;
+      text-align: center;
+    }
+
+    details {
+      background: #1f2535;
+      border: 1px solid #ffcc66; /* added gold border */
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+      padding: 10px 15px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #ffcc66;
+      font-weight: bold;
+      outline: none;
+    }
+
+    .news-box {
+      background: #1f2535;        /* same as nav background */
+      /* border: 1px solid #ffcc66; */  /* gold border */
+      border-radius: 8px;         /* rounded corners */
+      padding: 16px 20px;
+      margin: 20px auto;
+      max-width: 800;           /* center container size */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    strong {
+      color: #ffcc66;
+    }
+
+    li::marker {
+      color: #ffcc66;
+    }
+
+    .newpatch {
+      color: #ff9966;
+    }
+
+    .previous {
+      color: #999999;
+    }
+
+    a {
+    color: #1E90FF;
+    text-decoration: none; /* Optional: Remove underline */
+    transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #FF4500;
+      text-decoration: underline; /* Optional: underline on hover */
+    }
+    
+    /* --- NAV MENU STYLING --- */
+    #nav-placeholder {
+      min-height: 35px; /* match your nav height */
+      background-color: #171c28;
+    }
+
+    .nav {
+      background: #1f2535;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      height: 35px;
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      height: 100%;
+    }
+
+    .menu > li {
+      position: relative;
+      height: 100%;
+    }
+
+    .menu > li > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 16px;
+      color: #ffcc66;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu > li > a:hover {
+      background: #171c28;
+      color: #ffcc66;
+    }
+
+    /* Dropdown Submenu */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #1f2535;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      min-width: 180px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .submenu li a {
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      box-sizing: border-box;
+    }
+
+    .submenu li a:hover {
+      background: #171c28;
+      color: #ffcc66;
+    }
+
+    /* Show dropdown on hover */
+    .menu li:hover > .submenu {
+      display: block;
+    }
+    
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 45px;
+      /* right:20px; */
+      left: calc(50% + 350px); /* 50% centers it, +XXpx pushes to container edge */    
+      background: #ffcc66;
+      color: #1f2535;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      display: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 9999;
+    }
+
+    /* Tooltip text */
+    #backToTop::after {
+    content: "Back to Top";
+    position: absolute;
+    top: 110%;           /* place it below the button */
+    left: 40%;           /* center horizontally */
+    transform: translateX(-50%); /* adjust for centering */    
+    /*  background: #1f2535; */
+    color: #ffcc66;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    }
+
+    /* Show tooltip on hover */
+    #backToTop:hover::after {
+      opacity: 1;
+    }
