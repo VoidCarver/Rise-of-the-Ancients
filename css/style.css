@@ -83,6 +83,14 @@
       outline: none;
     }
 
+    .dev-notes {
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #ffcc66;
+      font-weight: bold;
+      outline: none;
+    }
+
     .news-box {
       background: #1f2535;        /* same as nav background */
       /* border: 1px solid #ffcc66; */  /* gold border */
