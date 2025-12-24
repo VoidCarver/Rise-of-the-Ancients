@@ -10,47 +10,48 @@
 <body>
 <div class="container">
   <img src="./img/rota-banner.png" alt="Community Patch Banner" class="header-img">
+  
   <!-- Nav Menu -->
   <div id="nav-placeholder"></div>
 
     <h1>ROR Community Patch</h1>
     <ul>      
       <li>The mod can be found on 
-        <a href="https://www.ageofempires.com/mods/details/236998/" target="_blank">Age of Empires Mod Page</a>
+        <a href="https://www.ageofempires.com/mods/details/236998/" target="_blank">Age of Empires Mod Page</a><br>
+        <span class="previous">You can also search the mod directly in-game, search "ROR Community Patch"</span>
       </li>
-      <li>Full Patch Notes of the currently playable ROR Community Patch.</li>
+      <li>This patch is only supported in English language as of now.<br>
+        <span class="previous">The mod will still work if your game is set to another language but it will default to English Text.</span>
+      </li>
+      <li>Every Patch Notes of the Community Patch are available on this page.<br>
+        <span class="previous">Any section can be Collapsed/Expanded just by clicking on its header.</span>
+      </li>
     </ul>
 
-    <!-- Currently Live - Update 1.7 -->
+    <!-- Currently Live - Update 1.8 -->
     <details open>
-      <summary>Currently Live - Update 1.7</summary>
+      <summary>Currently Live - Update 1.8</summary>
 
-      <!-- General -->
-      <h4>General</h4>
+      <!-- New Technologies -->
+      <h4>New Technologies</h4>
         <ul>
-            <li>Community Patch implemented on latest .dat file (#160062).</li>
+          <li><strong>Needlework</strong><br>
+            Tool Age - Town Center<br>
+            Villagers +10 HP and +1 Attack<br>
+            Cost 50 Food, Research Time 20 sec<br>
+            (Available to every Civilization except Sumerians).
+          </li>
         </ul>
 
       <!-- Technologies -->
       <h4>Technologies</h4>
         <ul>
-          <li><strong>Needlework</strong><br>
-            <strong>NEW</strong> - Tool Age - Town Center<br>
-            Villagers +10 HP and +1 Attack<br>
-            Cost 50 Food, Research Time 20 sec<br>
-            (Available to every Civilization except Sumerians).
-          </li>
-
-          <li><strong>Battle Axe</strong><br>
-            Upgrade research time increased from 40 sec -> 45 sec
-          </li>
-
           <li><strong>Leather Armor upgrades</strong><br>
-            Leather Armor for Infantry, Archers and Cavalry research time increased from 30 -> 45 sec
+            Leather Armor for Infantry, Archers and Cavalry research time increased from 30 -> 40 sec
           </li>
 
           <li><strong>Stone Mining</strong><br>
-            Upgrade cost increased from 100 Food 50 Stone -> 120 Food 50 Stone
+            Upgrade cost changed from 100 Food 50 Stone -> 120 Food 50 Wood
           </li>
 
           <li><strong>Composite Bowman</strong><br>
@@ -58,12 +59,16 @@
           </li>
 
           <li><strong>Wheel</strong><br>
-            Move speed decreased from 60% -> 40%<br>
-            <span class="previous">All bonuses are additive (10+40) Villagers total move speed increase is now 50% instead of 60%.</span><br>
-            Below are the new Villagers move speed:<br>
-            Stone Age: Non Assyrians 0.92 & Assyrians 1.01<br>
-            Tool Age: Non Assyrians 1.01 & Assyrians 1.1 <span class="previous">(Default 0.92 & Assyrians 1.03)</span><br>
+            Move speed decreased from 60% -> 50%<br>
+            Villager move speed is now:<br>
             Bronze Age: Non Assyrians 1.38 & Assyrians 1.47 <span class="previous">(Default 1.49 & Assyrians 1.58)</span><br>
+          </li>
+
+          <li><strong>Logistics</strong><br>
+            Upgrade cost changed from 180 Food 100 Gold -> 200 Food 150 Gold<br>
+            Barracks units take 1/2 population<br>
+            Swordsman line move 10% faster (+0.10 ms)<br>
+            <span class="previous">(Previously "Barracks units take 1/2 population")</span>
           </li>
 
           <li><strong>City Watch</strong><br>
@@ -93,16 +98,17 @@
       <!-- Units -->
       <h4>Units</h4>
         <ul>
-          <li><strong>Villagers</strong><br>
-            Now move 10% faster when reaching the Tool Age (Assyrians included).
-          </li>
-
           <li><strong>Clubman</strong><br>
             Train time increased from 26 sec -> 30 sec
           </li>
 
           <li><strong>Slinger</strong><br>
-            Cost increased from 40 Food 10 Stone -> 45 Food 10 Stone
+            Cost increased from 40 Food 10 Stone -> 45 Food 10 Stone<br>
+            Base Range increased from 4 -> 5<br>
+            Base Line of Sight increased from 6 -> 7<br>
+            Base Damage decreased from 2 -> 1<br>
+            Base Pierce Armor decreased from 3 -> 2<br>
+            (Unchanged +3 Bonus damage vs. Archers/Walls/Gates/Towers).
           </li>
 
           <li><strong>Bowman</strong><br>
@@ -115,6 +121,10 @@
             Now have x2 Conversion resistance and +4 Extra Damage vs Priest
           </li>
 
+          <li><strong>Chariot Archer</strong><br>
+            Base Range decreased from 7 -> 6
+          </li>
+
           <li><strong>Camel Rider line</strong><br>
             Move speed increased from 1.66 -> 1.71   
           </li>
@@ -124,8 +134,7 @@
           </li>
 
           <li><strong>Legionary</strong><br>
-            Hit Points increased from 140 -> 160<br>
-            Move Speed increased from 1 -> 1.05
+            Hit Points increased from 140 -> 160
           </li>
 
           <li><strong>Scythe Chariot</strong><br>
@@ -139,7 +148,7 @@
             Attack Anim Duration decreased from 0.99 -> 0.9
           </li>
 
-          <li><strong>Heavy Horse Archers</strong><br>
+          <li><strong>Heavy Horse Archer</strong><br>
             Move speed decreased from 2.08 -> 1.91   
           </li>
 
@@ -172,7 +181,7 @@
 
           <li><strong>Horseman Upgrade</strong><br>
             Iron Age - Stable<br>
-            Cost: 1200 Food 800 Gold 150 Sec<br>    
+            Cost: 900 Food 800 Gold 150 Sec<br>    
             Scouts +30 HP, +2 Pierce Armor, +3 Attack, +3 vs Archers.<br>
             (available to Carthaginians, Choson, Greeks, Macedonians, Minoans, Persians and Yamato)    
           </li>               
@@ -198,6 +207,28 @@
             Hit Points increased from 75 -> 100
           </li>
 
+          <li><strong>Barracks</strong><br>
+            Cost increased from 125 Wood -> 150 Wood
+          </li>
+
+          <li><strong>Town Center</strong><br>
+            Cost increased from 200 -> 250 Wood<br>
+            <span class="previous">Nomad starts (Nomad, LN, Clearing and Mega Random) are unaffected by this change since you gain the cost of your TC as
+            extra Wood at game start. This is coded within map files and it will read the new TC cost values and grant the correct
+            extra Wood depending on your Civilization.</span>
+          </li>
+
+          <li><strong>Farm</strong><br>
+            Farm requirements are now (Tool Age & Granary)<br>
+            <span class="previous">(Previously "Tool Age, Granary & Market").</span>
+          </li>
+
+          <li><strong>Small, Medium & Fortified Gate</strong><br>
+            Armor Class 13 – Stone Walls & Gates & Towers decreased from 0 -> -1<br>
+            <span class="previous">(meant to keep Slinger damage to Gates unchanged after the 1 base damage reduction)</span><br>
+            <span class="previous">(damage dealt by Slinger to Walls and Towers is unaffected by the base damage reduction, so further adjustments were not necessary).</span>
+          </li>
+
           <li><strong>Towers</strong><br>
             Now cause 100% more damage to Scout Ship-line and Transport Ship-line<br>
             (Affected units are Scout Ship, War Galley, Trireme, Light Transport and Heavy Transport).
@@ -209,72 +240,120 @@
             <span class="previous">(New values are equal to Ballista Tower stats in Aoe1 DE).</span>
           </li>
 
-          <li><strong>Farms</strong><br>
-            Farms no longer require Market to unlock and can be built when reaching Tool Age as long as you have a Granary.
-          </li>
-
-          <li><strong>Town Center</strong><br>
-            Cost increased from 200 -> 250 Wood<br>
-            <span class="previous">Nomad starts (Nomad, LN, Clearing and Mega Random) are unaffected by this change since you gain the cost of your TC as
-            extra Wood at game start. This is coded within map files and it will read the new TC cost values and grant the correct
-            extra Wood depending on your Civilization.</span>
-          </li> 
         </ul>
 
       <!-- Civilizations -->
       <h4>Civilizations</h4>
         <ul>
           <li><strong>Assyrians</strong><br>
-            Archers fire 22/33% faster in Tool/Bronze Age<br>
-            <span class="previous">(Previously "Archers fire 11/22/33% faster in Tool/Bronze/Iron Age").</span>
+            - Archers fire 22/33% faster in Tool/Bronze Age<br>
+            <span class="previous">(Previously "Archers fire 11/22/33% faster in Tool/Bronze/Iron Age").</span><br>
+            - Gain access to Heavy Horse Archer<br>
+            - Gain access to Bronze Shield
+          </li>
+
+          <li><strong>Babylonians</strong><br>
+            - City Watch free<strong> (New Civ Bonus)</strong><br>
+            - Market and Granary technologies cost -30% (except Ballista Tower)<br>
+            <span class="previous">(Previously "Market technologies cost -30%").</span><br>          
+            - Walls and Towers +50% hit points<br>
+            <span class="previous">(Previously "Walls and Towers +60% hit points").</span><br>
+            - Gain access to Iron Shield
+          </li>
+
+          <li><strong>Choson</strong><br>
+            - Watch Tower upgrade free (requires Granary)<strong> (New Civ Bonus)</strong><br>
+            - Towers +1/+2 range in Bronze/Iron Age<br>
+            <span class="previous">(Previously "Towers +2 range").</span><br>
+            - Gain access to Chain Mail Armor for Cavalry
           </li>
 
           <li><strong>Greeks</strong><br>
-            Academy units move 25% faster and cost -20%<br>
+            - Academy units move 25% faster and cost -20%<br>
             <span class="previous">(Previously "Academy units move 30% faster and cost -20%").</span>
           </li>
 
           <li><strong>Hittites</strong><br>
-            Wheel -50% cost and -33% research time (90sec -> 60sec)<br>
-            <span class="previous">(Previously "Wheel -50% cost and research time" (90sec to 45sec))</span><br>
-            Now have access to Fishing Ship upgrade.
+            - All Archers cost -10/-15/-20% in Tool/Bronze/Iron Age<br>
+            <span class="previous">(Previously "All Archers +1 attack").</span><br>
+            - Gain access to Fishing Ship
           </li>
 
           <li><strong>Lac Viet</strong><br>
-            Military Units created 20% faster starting in Tool Age<br>
+            - Military Units created 20% faster starting in Tool Age<br>
             <span class="previous">(Previously "Military Units created 25% faster").</span><br>
-            Archery Range units +1/+2 Armor in Tool/Iron Age<br>
-            Ballista +2 armor.<br>
-          <span class="previous">(Previously "Archery Range units and Ballista +2 armor").</span>
+            - Archery Range units +1/+2 Armor in Tool/Iron Age<br>
+            - Ballista +2 armor.<br>
+            <span class="previous">(Previously "Archery Range units and Ballista +2 armor").</span>
           </li>
 
           <li><strong>Macedonians</strong><br>
-            Archery Ranges work 10% faster<strong> (New TB)</strong><br>
-            <span class="previous">(Previously "Houses +50 HP").</span>
+            - Barracks and Academy units (except Slinger) +1/+2/+3P armor in Tool/Bronze/Iron Age<br>
+            <span class="previous">(Previously "Academy units +1P armor in Bronze Age, +2 in Iron Age").</span><br>
+            - Archery Ranges work 10% faster<strong> (New Team Bonus)</strong><br>
+            <span class="previous">(Previously "Houses +50 HP").</span><br>
+            - Lose access to Tower Shield
+          </li>
+
+          <li><strong>Minoans</strong><br>      
+            - Non-military naval units cost -10%<br>
+            - War ships cost -20/-25/-30% in Tool/Bronze/Iron Age<br>
+            <span class="previous">(Previously "Ships cost -15/-20/-25/-30% in Stone/Tool/Bronze/Iron Age").</span><br>
+            <details>
+              <summary class="summary-h2">More Infos</summary>
+              <span class="previous">New & Old Costs:<br>
+              - Fishing Ship (Base Cost 50W)<br>
+              Now always 45 Wood (Previously "Stone 43W / Tool 40W / Bronze 38W / Iron 35W")<br>   
+              - Transport Ship (Base Cost 150W)<br>
+              Now always 135 Wood (Previously "Tool 120W / Bronze 113W / Iron 105W")<br>     
+              - Trade Ship (Base Cost 75W 60G)<br>
+              Now always 68 Wood 54 Gold (Previously "Bronze 56W 45G / Iron 52W 42G")</span>
+            </details>
           </li>
 
           <li><strong>Palmyrans</strong><br>
-            Camel Riders move 20% faster (1.71 -> 2.05)<br>
-            <span class="previous">(Previously 25%, 1.66 -> 2.08)</span>
+            - Camel Riders move 20% faster (1.71 -> 2.05)<br>
+            <span class="previous">(Previously 25%, 1.66 -> 2.08).</span>
+          </li>
+
+          <li><strong>Persians</strong><br>
+            - Storage Pit upgrades cost no gold<strong> (New Civ Bonus)</strong>
           </li>
 
           <li><strong>Shang</strong><br>
-            Government Centers work 80% faster (44% less time)<strong> (New TB)</strong><br>
+            - Villagers cost 45 Food<br>
+            <span class="previous">(Previously "Villagers cost 40 Food").</span><br>
+            - No longer start the game with -40 Food<br>
+            <span class="previous">(Previously "Start the game with -40 Food).</span><br>
+            - Cavalry-line attacks 15% faster<br>
+            <span class="previous">(Previously "Cavalry-line attacks 10% faster").</span><br>
+            - Walls +50% hit points<br>
+            <span class="previous">(Previously "Walls +60% hit points").</span><br>
+            - Government Centers work 80% faster (44% less time)<strong> (New Team Bonus)</strong><br>
             <span class="previous">(Previously "Town centers provide +4 population room").</span>
           </li>
 
           <li><strong>Sumerians</strong><br>
-            Villagers have +1 Attack in Tool Age.<strong>(New Civ Bonus)</strong><br>
-            (do not have access to Needlework Technology).<br>
-            Town Centers cost -20%<br>
+            - Advancing to the next Age costs -10%<strong> (New Civ Bonus)</strong><br>
+            - Villagers have +1 Attack in Tool Age<strong> (New Civ Bonus)</strong><br>
+            - Stone Thrower, Catapult, Heavy Catapult fire 33% faster<br>
+            <span class="previous">(Previously "Stone Thrower, Catapult, Heavy Catapult fire 45% faster").</span><br>
+            - Town Centers cost -20%<br>
             <span class="previous">(Previously "Town Centers cost -25%")</span><br>
-            TC Sumerians / w. Sumerians Ally Now 200 Wood <span class="previous">(Previously 150 Wood)</span><br>
-            TC Romans Now 225 Wood <span class="previous">(Previously 180 Wood)</span><br>
-            TC Romans w. Sumerians Ally Now 180 Wood <span class="previous">(Previously 135 Wood)</span>
+            <details>
+              <summary class="summary-h2">More Infos</summary>
+              <span class="previous">
+              TC Sumerians / w. Sumerians Ally Now 200 Wood (Previously 150 Wood)<br>
+              TC Romans Now 225 Wood (Previously 180 Wood)<br>
+              TC Romans w. Sumerians Ally Now 180 Wood (Previously 135 Wood)</span>
+            </details>
+
+            - Do not have access to Needlework Technology
           </li>
 
           <li><strong>Yamato</strong><br>
-            Scouts cost -10% Cavalry and Horse Archer lines cost -15%<br>
+            - Scout line cost -10%<br>
+            - Cavalry and Horse Archer lines cost -15%<br>
             <span class="previous">(Previously "All cavalry units and Horse Archers cost -15%").</span>
           </li> 
         </ul>
@@ -283,11 +362,10 @@
       <h4>"Work Factors" (WF) Overhaul on Farm's gathering rates</h4>
         <ul>
           <li>To be clear, we did not add this "Work Factor Adjustments", they are present in the game since release.
-          (This overhaul is mandatory since we're changing move speed in Tool and Wheel speed otherwise Farm's gathering rates
-          would go all over the place).</li>
-          <li>But why are those "WF" here?<br>
-          Well, in AOE DE, Farmers are standing still and farming on the same tile, in an AOE2 Farming Cycle, Villagers are gathering
-          a quarter of there carry capacity on each 4 randomly chosen tiles.</li> 
+          (This overhaul is mandatory since Wheel move speed was changed).</li>
+          <li>What is "WF" you might ask and why is it here?<br>
+          In AOE DE, Farmers are standing still and farming on the same tile.<br>
+          In AOE2 DE Farming Cycle, Villagers are gathering a quarter of there carry capacity on each 4 randomly chosen tiles.</li> 
           <li>Devs needed to adjust Farmers to the AOE2 Farming mechanic and at the same time, probably wanted to 
           retain AOE DE Farming balance, so they ended up adding those Work Factors so Villagers move speed doesn't
           impact gathering rates while farming, only specific Farming bonuses (Minoans) or Extra Work Rate (Palmyrans) do.</li> 
@@ -301,7 +379,7 @@
         <ul>
           <li><strong>Assyrians</strong><br>
           Fixed CB which was incorrectly granting Villagers 12% move speed instead of 10%.<br>
-          Assyrians Villagers will now move at 1.01 instead of 1.03 in Stone Age (they will still outrun Elephants).<br>
+          Assyrians Villagers will now move at 1.01 instead of 1.03 without Wheel upgrade (they will still outrun Elephants).<br>
           </li>
 
           <li><strong>Zealotry</strong><br>
@@ -341,12 +419,173 @@
     </details>
 
     <ul>
-      <li><strong>Changelog of every ROR Community Patches.</strong></li>
+      <li><strong>Changelog History - ROR Community Patch</strong></li>
     </ul>
+
+    <!-- Update 1.8 -->
+    <details open>
+      <summary>Changelog - v1.8 – December 2025</summary>      
+
+      <!-- Technologies -->
+      <h4>Technologies</h4>
+      <ul>
+        <li><strong>Battle Axe</strong><br>
+          Research time decreased from 45 sec -> 40 sec <span class="previous">(Reverted to Default 40 sec balance)</span><br>
+        </li>
+
+        <li><strong>Tool Age Leather Armor Upgrades (Infantry, Archers & Cavalry)</strong><br>
+          Research time decreased from 45 sec -> 40 sec <span class="previous">(Default 30 sec)</span>
+        </li>
+
+        <li><strong>Stone Mining</strong><br>
+          Upgrade cost changed from 120 Food 50 Stone -> 120 Food 50 Wood<br>
+          <span class="previous">(Previously in CP "120 Food 50 Stone" Default "100 Food 50 Stone")</span>
+        </li>
+
+        <li><strong>Wheel</strong><br>
+          Move speed decreased from 60% -> 50%<br>
+          <span class="previous">(Previously in CP "60% -> 40% with Villager +10% Move Speed in Tool")</span><br>
+          Below are the new Villagers move speed:<br>
+          Stone Age: Non Assyrians 0.92 & Assyrians 1.01<br>
+          Tool Age: Non Assyrians 0.92 & Assyrians 1.01 <span class="previous">(Default 0.92 & Assyrians 1.03)</span><br>
+          Bronze Age: Non Assyrians 1.38 & Assyrians 1.47 <span class="previous">(Default 1.49 & Assyrians 1.58)</span><br>
+        </li>
+
+        <li><strong>Logistics</strong><br>
+          Upgrade cost changed from 180 Food 100 Gold -> 200 Food 150 Gold<br>
+          Barracks units take 1/2 population<br>
+          Swordsman line move 10% faster (+0.10 ms)<br>
+          <span class="previous">(Previously "Barracks units take 1/2 population")</span>
+        </li>
+
+        <li><strong>Legionary</strong><br>
+          No longer grants +5% Move Speed (+0.05 ms)
+        </li>
+      </ul>
+
+      <!-- Units -->
+      <h4>Units</h4>
+      <ul>
+        <li><strong>Villager</strong><br>
+          No longer move 10% faster when reaching the Tool Age<br>
+        </li>
+
+        <li><strong>Slinger</strong><br>
+          Cost increased from 40 Food 10 Stone -> 45 Food 10 Stone <span class="previous">(already in Patch since 1.4)</span><br>
+          Base Range increased from 4 -> 5<br>
+          Base Line of Sight increased from 6 -> 7<br>
+          Base Damage decreased from 2 -> 1<br>
+          Base Pierce Armor decreased from 3 -> 2<br>
+          (Unchanged +3 Bonus damage vs. Archers/Walls/Gates/Towers).
+        </li>
+
+        <li><strong>Chariot Archer</strong><br>
+          Base Range decreased from 7 -> 6
+        </li>
+      </ul>
+
+      <!-- New Units -->
+      <h4>New Units</h4>
+        <ul>
+          <li><strong>Horseman Upgrade</strong><br>
+            Cost changed from 1200 Food 800 Gold 150 Sec -> 900 Food 800 Gold 150 Sec
+          </li>           
+        </ul>
+
+      <!-- Buildings -->
+      <h4>Buildings</h4>
+      <ul>
+        <li><strong>Barracks</strong><br>
+          Cost increased from 125 Wood -> 150 Wood
+        </li>
+
+        <li><strong>Small, Medium & Fortified Gate</strong><br>
+          Armor Class 13 – Stone Walls & Gates & Towers decreased from 0 -> -1<br>
+          <span class="previous">(meant to keep Slinger damage to Gates unchanged after the 1 base damage reduction)</span><br>
+          <span class="previous">(damage dealt by Slinger to Walls and Towers is unaffected by the base damage reduction, so further adjustments were not necessary).</span>
+        </li>
+      </ul>
+
+      <!-- Civilizations -->
+      <h4>Civilizations</h4>
+      <ul>
+        <li><strong>Assyrians</strong><br>
+          - Gain access to Heavy Horse Archer<br>
+          - Gain access to Bronze Shield
+        </li>
+
+        <li><strong>Babylonians</strong><br>
+          - City Watch free<strong> (New Civ Bonus)</strong><br>
+          - Market and Granary technologies cost -30% (except Ballista Tower)<br>
+          <span class="previous">(Previously "Market technologies cost -30%"")</span><br>      
+          - Walls and Towers +50% hit points<br>
+          <span class="previous">(Previously "Walls and Towers +60% hit points").</span><br>
+          - Gain access to Iron Shield
+        </li>
+
+        <li><strong>Choson</strong><br>
+          - Watch Tower upgrade free (requires Granary)<strong> (New Civ Bonus)</strong><br>
+          - Towers +1/+2 range in Bronze/Iron Age<br>
+          <span class="previous">(Previously "Towers +2 range").</span><br>
+          - Gain access to Chain Mail Armor for Cavalry
+        </li>
+
+        <li><strong>Hittites</strong><br>
+          - All Archers cost -10/-15/-20% in Tool/Bronze/Iron Age<br>
+          <span class="previous">(Previously "All Archers +1 attack").</span><br>
+          - Wheel -50% cost and research time" (Reverted to Default)<br>
+          <span class="previous">(Previously in CP "Wheel -50% cost and -33% research time (90sec -> 60sec))</span>
+        </li>
+
+        <li><strong>Macedonians</strong><br>
+          - Barracks and Academy units (except Slinger) +1/+2/+3P armor in Tool/Bronze/Iron Age<br>
+          <span class="previous">(Previously "Academy units +1P armor in Bronze Age, +2 in Iron Age").</span><br>
+          - Lose access to Tower Shield
+        </li>
+
+        <li><strong>Minoans</strong><br>
+          - Non-military naval units cost -10%<br>
+          - War ships cost -20/-25/-30% in Tool/Bronze/Iron Age<br>
+          <span class="previous">(Previously "Ships cost -15/-20/-25/-30% in Stone/Tool/Bronze/Iron Age").</span><br>
+            <details>
+              <summary class="summary-h2">More Infos</summary>
+              <span class="previous">New & Old Costs:<br>
+              - Fishing Ship (Base Cost 50W)<br>
+              Now always 45 Wood (Previously "Stone 43W / Tool 40W / Bronze 38W / Iron 35W")<br>   
+              - Transport Ship (Base Cost 150W)<br>
+              Now always 135 Wood (Previously "Tool 120W / Bronze 113W / Iron 105W")<br>     
+              - Trade Ship (Base Cost 75W 60G)<br>
+              Now always 68 Wood 54 Gold (Previously "Bronze 56W 45G / Iron 52W 42G")</span>
+            </details>
+        </li>
+
+        <li><strong>Persians</strong><br>
+          - Storage Pit upgrades cost no gold<strong> (New Civ Bonus)</strong>
+        </li>
+
+        <li><strong>Shang</strong><br>
+          - Villagers cost 45 Food<br>
+          <span class="previous">(Previously "Villagers cost 40 Food").</span><br>
+          - No longer start the game with -40 Food<br>
+          <span class="previous">(Previously "Start the game with -40 Food).</span><br>
+          - Cavalry-line attacks 15% faster<br>
+          <span class="previous">(Previously "Cavalry-line attacks 10% faster").</span><br>
+          - Walls +50% hit points<br>
+          <span class="previous">(Previously "Walls +60% hit points").</span>
+        </li>
+
+        <li><strong>Sumerians</strong><br>
+          - Advancing to the next Age costs -10%<strong> (New Civ Bonus)</strong><br>
+          - Stone Thrower, Catapult, Heavy Catapult fire 33% faster<br>
+          <span class="previous">(Previously "Stone Thrower, Catapult, Heavy Catapult fire 45% faster").</span>
+        </li>
+      </ul>
+
+    </details>
 
     <!-- Update 1.7 -->
     <details>
-      <summary>Changelog - Update 1.7 – November 2025</summary>
+      <summary>Changelog - v1.7 – November 2025</summary>
       <!-- Bug Fixes -->
       <h4>Bug Fixes</h4>
         <ul>
@@ -356,7 +595,7 @@
 
     <!-- Update 1.6 -->
     <details>
-      <summary>Changelog - Update 1.6 – November 2025</summary>
+      <summary>Changelog - v1.6 – November 2025</summary>
       <!-- Bug Fixes -->
       <h4>Bug Fixes</h4>
         <ul>
@@ -368,7 +607,7 @@
 
     <!-- Update 1.5 -->
     <details>
-      <summary>Changelog - Update 1.5 – November 2025</summary>
+      <summary>Changelog - v1.5 – November 2025</summary>
       <!-- General -->
       <h4>General</h4>
         <ul>
@@ -502,9 +741,13 @@
           <li><strong>Sumerians</strong><br>
             Town Centers cost -20%<br>
             <span class="previous">(Previously "Town Centers cost -25%")</span><br>
-            TC Sumerians / w. Sumerians Ally Now 200 Wood <span class="previous">(Previously 150 Wood)</span><br>
-            TC Romans Now 225 Wood <span class="previous">(Previously 180 Wood)</span><br>
-            TC Romans w. Sumerians Ally Now 180 Wood <span class="previous">(Previously 135 Wood)</span>
+            <details>
+              <summary class="summary-h2">More Infos</summary>
+              <span class="previous">
+              TC Sumerians / w. Sumerians Ally Now 200 Wood (Previously 150 Wood)<br>
+              TC Romans Now 225 Wood (Previously 180 Wood)<br>
+              TC Romans w. Sumerians Ally Now 180 Wood (Previously 135 Wood)</span>
+            </details>
           </li>
         </ul>
 
@@ -577,7 +820,7 @@
 
     <!-- Update 1.4 -->
     <details>
-      <summary>Changelog - Update 1.4 – July 2024</summary>
+      <summary>Changelog - v1.4 – July 2024</summary>
 
       <!-- Technologies -->
       <h4>Technologies</h4>
@@ -661,7 +904,7 @@
 
     <!-- Update 1.3 -->
     <details>
-      <summary>Changelog - Update 1.3 – May 2024</summary>
+      <summary>Changelog - v1.3 – May 2024</summary>
 
       <!-- Technologies -->
       <h4>Technologies</h4>
@@ -710,11 +953,11 @@
           <span class="previous">(Previously "Archery Range units and Ballista +2 armor").</span>
         </li>
         <li><strong>Macedonians</strong><br>
-          Archery Ranges work 10% faster<strong> (New TB)</strong><br>
+          Archery Ranges work 10% faster<strong> (New Team Bonus)</strong><br>
           <span class="previous">(Previously "Houses +50 HP").</span>
         </li>
         <li><strong>Shang</strong><br>
-          Government Centers work 80% faster (44% less time)<strong> (New TB)</strong><br>
+          Government Centers work 80% faster (44% less time)<strong> (New Team Bonus)</strong><br>
           <span class="previous">(Previously "Town centers provide +4 population room").</span>
         </li>
       </ul>
@@ -729,7 +972,7 @@
 
     <!-- Update 1.2 -->
     <details>
-      <summary>Changelog - Update 1.2 – May 2024</summary>
+      <summary>Changelog - v1.2 – May 2024</summary>
       
       <ul>
         <li>No Balance Changes.</li>
@@ -746,7 +989,7 @@
 
     <!-- Update 1.1 -->
     <details>
-      <summary>Changelog - Update 1.1 – May 2024 (First Release)</summary>
+      <summary>Changelog - v1.1 – May 2024 (First Release)</summary>
 
       <!-- Technologies -->
       <h4>Technologies</h4>
