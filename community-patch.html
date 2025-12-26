@@ -416,7 +416,37 @@
           (defconst scout-cavalry-line -296)<br>
           (defconst camel-line -297)<br>
         </ul>
+
+        <!-- Known Issues -->
+        <br>
+        <details>
+          <summary class="summary-h2">Known Issues</summary>
+            <ul>
+              <li>We've done all we could to make the patch as compatible as possible with CA (Capture Age) 
+                but things like new technologies will not show up on the UI in the "currently researching" queue and it will 
+                not use correct icons.<br>
+                New units will not use the correct icons either and there names will display as the previous unit's name 
+                in that unit-line (ie: Heavy Camel Rider will be displayed as Camel Rider).<br>
+                The models for new units however will correctly render.<br>
+                All of this is due to CA not reading modded strings and modded content, there is nothing we can do about it 
+                unless CA Team one day push a feature for this.
+              </li>
+
+              <li>Official AI doesn't entirely support this patch, it will play as usual and use the Needlework
+                 Technology but will not make use of the new units, Horseman and Heavy Camel Rider.
+              </li>
+
+              <li>Hotkey for new technologies will not be implemented because that feature is very limited
+                 and not very well integrated either as it force users to create a new hotkey profile, 
+                 switch between them, and sometimes even bug out entire hotkeys profiles that need to be 
+                 entirely re-created.<br>
+                 We had rather not adding them than generating problems and a non pleasant experience.
+              </li>
+            </ul>
+        </details>
+
     </details>
+
 
     <ul>
       <li><strong>Changelog History - ROR Community Patch</strong></li>
@@ -424,7 +454,7 @@
 
     <!-- Update 1.8 -->
     <details open>
-      <summary>Changelog - v1.8 – December 2025</summary>      
+      <summary>Changelog - v1.8 – December 2025</summary>
 
       <!-- Technologies -->
       <h4>Technologies</h4>
