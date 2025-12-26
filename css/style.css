@@ -83,6 +83,21 @@
       outline: none;
     }
 
+    details > summary {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    }
+
+    details > summary:hover {
+    background: #2a3147;
+    }
+    
+    /* Optional: also help keyboard users */
+    details > summary:focus-visible {
+      outline: 2px solid #ffcc66;
+      background: #2a3147;
+    }
     .summary-h2 {
       cursor: pointer;
       font-size: 0.9rem;
