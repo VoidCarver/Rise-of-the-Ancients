@@ -18,19 +18,26 @@
     <ul>      
       <li>The mod can be found on 
         <a href="https://www.ageofempires.com/mods/details/236998/" target="_blank">Age of Empires Mod Page</a><br>
-        <span class="previous">You can also search the mod directly in-game, search "ROR Community Patch"</span>
+        <span class="previous">You can also search for the mod directly in-game, search "ROR Community Patch"</span><br>
       </li>
-      <li>This patch is only supported in English language as of now.<br>
-        <span class="previous">The mod will still work if your game is set to another language but it will default to English Text.</span>
+      <li>Mod Installation:<br>
+        - Subscribe to the Mod.<br>
+        - Open the in-game "Mods" page and check your mod priorities:<br>
+        Community Patch Mod MUST be above any other Tooltip mods you have active.<br>
+        <span class="previous">(Such as "14335_Improved Extended Tooltips")</span><br>
+        - Tooltips are best viewed with Tooltip Scale set to 50% (Options > Interface > Tooltip Scale).<br>
+        <span class="previous">(Higher values may reduce tooltip quality; values above 60% are not recommended).</span>
+      </li>
+      <li>Currently supported in English only.<br>
+        <span class="previous">The mod will still work if your game is set to another language but it will default to English text.</span>
       </li>
       <li>Every Patch Notes of the Community Patch are available on this page.<br>
-        <span class="previous">Any section can be Collapsed/Expanded just by clicking on its header.</span>
+        <span class="previous">Any section can be collapsed/expanded just by clicking on its header.</span>
       </li>
     </ul>
-
-    <!-- Currently Live - Update 1.8 -->
+    <!-- Currently Live - Update 1.9 -->
     <details open>
-      <summary>Currently Live - Update 1.8</summary>
+      <summary>Currently Live - Update 1.9</summary>
 
       <!-- New Technologies -->
       <h4>New Technologies</h4>
@@ -107,7 +114,6 @@
             Base Range increased from 4 -> 5<br>
             Base Line of Sight increased from 6 -> 7<br>
             Base Damage decreased from 2 -> 1<br>
-            Base Pierce Armor decreased from 3 -> 2<br>
             (Unchanged +3 Bonus damage vs. Archers/Walls/Gates/Towers).
           </li>
 
@@ -248,7 +254,6 @@
           <li><strong>Assyrians</strong><br>
             - Archers fire 22/33% faster in Tool/Bronze Age<br>
             <span class="previous">(Previously "Archers fire 11/22/33% faster in Tool/Bronze/Iron Age").</span><br>
-            - Gain access to Heavy Horse Archer<br>
             - Gain access to Bronze Shield
           </li>
 
@@ -274,8 +279,6 @@
           </li>
 
           <li><strong>Hittites</strong><br>
-            - All Archers cost -10/-15/-20% in Tool/Bronze/Iron Age<br>
-            <span class="previous">(Previously "All Archers +1 attack").</span><br>
             - Gain access to Fishing Ship
           </li>
 
@@ -374,6 +377,16 @@
           <li>A lot of efforts was put into those adjustments to make sure everything is working as intended.</li>  
         </ul>
 
+      <!-- Tooltip Changes -->
+      <h4>Tooltip Changes</h4>
+        <ul>
+          <li>Entire rewrite of all of the in-game tooltips with color coding, extra infos, added icons and better overall readability.</li>
+
+          <li>Most of the extra infos are aimed at helping less knowledgeable Players.</li>
+
+          <li>Best rendering with in-game Options > Interface > Tooltip Scale 50%.</li>
+        </ul>
+
       <!-- Bug Fixes -->
       <h4>Bug Fixes</h4>
         <ul>
@@ -422,25 +435,17 @@
         <details>
           <summary class="summary-h2">Known Issues</summary>
             <ul>
-              <li>We've done all we could to make the patch as compatible as possible with CA (Capture Age) 
-                but things like new technologies will not show up on the UI in the "currently researching" queue and it will 
-                not use correct icons.<br>
-                New units will not use the correct icons either and there names will display as the previous unit's name 
-                in that unit-line (ie: Heavy Camel Rider will be displayed as Camel Rider).<br>
-                The models for new units however will correctly render.<br>
-                All of this is due to CA not reading modded strings and modded content, there is nothing we can do about it 
-                unless CA Team one day push a feature for this.
+              <li>Everything possible on our end was done to make the patch as compatible as possible with CA (Capture Age) 
+                but due to the fact that CA do not read custom strings, Needlework, Horseman and Heavy Camel Upgrade will not show up as "currently researching" 
+                and new technologies/units will not use correct icons.<br>
               </li>
 
-              <li>Official AI doesn't entirely support this patch, it will play as usual and use the Needlework
-                 Technology but will not make use of the new units, Horseman and Heavy Camel Rider.
+              <li>Official AI only support Needlework but not the new Units.
+                Try "BruteForce" AI by CheeseOnToast if you want an AI that fully support Community Patch.
               </li>
 
-              <li>Hotkey for new technologies will not be implemented because that feature is very limited
-                 and not very well integrated either as it force users to create a new hotkey profile, 
-                 switch between them, and sometimes even bug out entire hotkeys profiles that need to be 
-                 entirely re-created.<br>
-                 We had rather not adding them than generating problems and a non pleasant experience.
+              <li>Custom Hotkeys are not be implemented yet and we are still looking into implementing that in the future.<br>
+                We know it's possible but so far it's been buggy and clunky in our last integration tests so for now we rather not add support than generate problems and a non pleasant experience.
               </li>
             </ul>
         </details>
@@ -452,8 +457,84 @@
       <li><strong>Changelog History - ROR Community Patch</strong></li>
     </ul>
 
-    <!-- Update 1.8 -->
+    <!-- Update 1.9 -->
     <details open>
+      <summary>Changelog - v1.9 – May 2026</summary>
+
+      <!-- General -->
+      <h4>General</h4>
+      <ul>
+        <li>Community Patch has been updated and now uses the latest .dat file.</li>
+        <li>Handicap system should now work properly again.</li>
+      </ul>
+
+      <!-- Units -->
+      <h4>Units</h4>
+      <ul>
+        <li><strong>Slinger</strong><br>
+          Reverted one of the balance change introduced with CP 1.8.<br>
+          Base Pierce Armor increased from 2 -> 3 <span class="previous">(Default Balance)</span>
+        </li>
+      </ul>
+
+      <!-- Civilizations -->
+      <h4>Civilizations</h4>
+      <ul>
+        <li><strong>Assyrians</strong><br>
+          Reverted one of the balance change introduced with CP 1.8.<br>
+          - Lose access to Heavy Horse Archer.
+        </li>
+
+        <li><strong>Hittites</strong><br>
+          Reverted one of the civilization bonus change introduced with CP 1.8.<br>
+          - Lose "All Archers cost -10/-15/-20% in Tool/Bronze/Iron Age"<br>
+          - Gain "All archers +1 attack"
+        </li>
+      </ul>
+
+      <!-- Tooltip Changes -->
+      <h4>Tooltip Changes</h4>
+        <ul>
+          <li>Complete rewrite of all in-game tooltips with extra color coding, additional information, icons, and improved overall readability.</li>
+
+          <li>Most of the extra infos are aimed at helping less knowledgeable Players.</li>
+
+          <li>Tooltips are best viewed with Tooltip Scale set to 50% (Options > Interface > Tooltip Scale).<br>
+            (Higher values may reduce tooltip quality; values above 60% are not recommended).     
+          </li>
+
+          <li>Overhauled all Community Patch tooltips.<br>
+            Introduced a smarter system for faster, easier updates.
+          </li>
+
+          <li>Note worthy changes are noted below, those are text corrections only:<br>
+            - Added icons for Research time, Move Speed, Reload Time and Blast Radius.<br>
+            - Added Blast Radius values for Stone Thrower line, Scythe Chariots and War Elephant line.<br>
+            - Villager tooltip now includes "Hit Points, Attack (Town Center)".<br>
+            - House tooltip now includes "Population Space (Government Center)"<br>
+            - Watch, Sentry, Guard and Ballista Tower tooltips now includes "line of sight (Town Center)".<br>
+            - Priest tooltip now state "Upgrades at Temple" instead of "Upgrades at Monastery".
+          </li>
+
+          <li>Fixed upgrade cost mismatch for Scout and Camel Rider tooltips.</li>
+
+          <li>Fixed grammar on Zealotry technology tooltip.</li>
+          
+          <li>This list is non exhaustive, every single tooltip has been rewritten/reformatted.</li>
+        </ul>
+      
+      <!-- Bug Fixes -->
+      <h4>Bug Fixes</h4>
+        <ul>
+          <li>Fixed an issue where Macedonians was incorrectly having access to Heavy Camel Rider upgrade when Camel Rider unit is not available to the civilization.</li>
+
+          <li>Fixed an issue where Choson was incorrectly not having access to Chain Mail Armor for Cavalry upgrade while it was a balance change to the civilization in CP 1.8.</li>
+        </ul>
+
+    </details>
+
+    <!-- Update 1.8 -->
+    <details>
       <summary>Changelog - v1.8 – December 2025</summary>
 
       <!-- Technologies -->
