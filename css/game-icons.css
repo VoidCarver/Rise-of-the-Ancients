@@ -1,0 +1,162 @@
+:root {
+  /* Colors */
+  --color-surface-hover: #2a3147;
+  --color-unit-player: #354f73;
+}
+
+[data-theme="light"] {
+  /* Light theme overrides */
+  --color-surface-hover: #e8e8e8;
+  --color-unit-player: #354f73;
+}
+
+/*==================================================*
+ * Inline Game Icons
+ *==================================================*/
+
+.res {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: middle;
+  margin: 0 0.12em 0.25em 0.08em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tech,
+.unit,
+.building {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  margin: 0 0.12em 0.25em 0.08em;
+  border: 1px solid var(--color-surface-hover);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tech,
+.unit {
+  background-color: var(--color-unit-player);
+}
+
+.civ {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  margin: 0 0.12em 0.25em 0.08em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*--------------------------------------------------*
+ * Resources
+ *--------------------------------------------------*/
+
+.res.food  { background-image: url(../img/ingame/res/food.png); }
+.res.wood  { background-image: url(../img/ingame/res/wood.png); }
+.res.stone { background-image: url(../img/ingame/res/stone.png); }
+.res.gold  { background-image: url(../img/ingame/res/gold.png); }
+
+/*--------------------------------------------------*
+ * Technologies
+ *--------------------------------------------------*/
+
+.tech.needlework { background-image: url(../img/ingame/techs/needlework.png); }
+.tech.city-watch  { background-image: url(../img/ingame/techs/city-watch.png); }
+.tech.urbanization  { background-image: url(../img/ingame/techs/urbanization.png); }
+.tech.conscription  { background-image: url(../img/ingame/techs/conscription.png); }
+
+.tech.stone-mining  { background-image: url(../img/ingame/techs/stone-mining.png); }
+
+.tech.logistics  { background-image: url(../img/ingame/techs/logistics.png); }
+
+.tech.leather-infantry  { background-image: url(../img/ingame/techs/leather-infantry.png); }
+.tech.leather-archer  { background-image: url(../img/ingame/techs/leather-archer.png); }
+.tech.leather-cavalry  { background-image: url(../img/ingame/techs/leather-cavalry.png); }
+
+.tech.battle-axe  { background-image: url(../img/ingame/techs/battle-axe.png); }
+.tech.composite  { background-image: url(../img/ingame/techs/composite-bowman.png); }
+
+.tech.wheel  { background-image: url(../img/ingame/techs/wheel.png); }
+
+.tech.zealotry  { background-image: url(../img/ingame/techs/zealotry.png); }
+
+.tech.legionary  { background-image: url(../img/ingame/techs/legionary.png); }
+.tech.horseman  { background-image: url(../img/ingame/techs/horseman.png); }
+.tech.heavy-camel-rider  { background-image: url(../img/ingame/techs/heavy-camel-rider.png); }
+
+/*--------------------------------------------------*
+ * units
+ *--------------------------------------------------*/
+
+.unit.villager  { background-image: url(../img/ingame/units/villager.png); }
+
+.unit.clubman  { background-image: url(../img/ingame/units/clubman.png); }
+.unit.axeman  { background-image: url(../img/ingame/units/axeman.png); }
+.unit.bowman  { background-image: url(../img/ingame/units/bowman.png); }
+.unit.slinger  { background-image: url(../img/ingame/units/slinger.png); }
+
+.unit.scout  { background-image: url(../img/ingame/units/scout.png); }
+.unit.horseman  { background-image: url(../img/ingame/units/horseman.png); }
+.unit.scythe-chariot  { background-image: url(../img/ingame/units/scythe-chariot.png); }
+.unit.camel-rider  { background-image: url(../img/ingame/units/camel-rider.png); }
+.unit.heavy-camel-rider  { background-image: url(../img/ingame/units/heavy-camel-rider.png); }
+.unit.cavalry  { background-image: url(../img/ingame/units/cavalry.png); }
+.unit.heavy-cavalry  { background-image: url(../img/ingame/units/heavy-cavalry.png); }
+.unit.cataphract  { background-image: url(../img/ingame/units/cataphract.png); }
+.unit.war-elephant  { background-image: url(../img/ingame/units/war-elephant.png); }
+.unit.armored-elephant  { background-image: url(../img/ingame/units/armored-elephant.png); }
+
+.unit.legionary  { background-image: url(../img/ingame/units/legionary.png); }
+
+.unit.chariot-archer  { background-image: url(../img/ingame/units/chariot-archer.png); }
+.unit.heavy-horse-archer  { background-image: url(../img/ingame/units/heavy-horse-archer.png); }
+
+.unit.heavy-catapult  { background-image: url(../img/ingame/units/heavy-catapult.png); }
+
+.unit.ballista  { background-image: url(../img/ingame/units/ballista.png); }
+.unit.helepolis  { background-image: url(../img/ingame/units/helepolis.png); }
+
+.unit.light-transport  { background-image: url(../img/ingame/units/light-transport.png); }
+.unit.heavy-transport  { background-image: url(../img/ingame/units/heavy-transport.png); }
+
+/*--------------------------------------------------*
+ * Buildings
+ *--------------------------------------------------*/
+
+.building.house  { background-image: url(../img/ingame/buildings/house.png); }
+.building.farm  { background-image: url(../img/ingame/buildings/farm.png); }
+.building.town-center  { background-image: url(../img/ingame/buildings/town-center.png); }
+.building.barracks  { background-image: url(../img/ingame/buildings/barracks.png); }
+.building.tower  { background-image: url(../img/ingame/buildings/tower.png); }
+.building.ballista-tower  { background-image: url(../img/ingame/buildings/ballista-tower.png); }
+.building.small-gate  { background-image: url(../img/ingame/buildings/small-gate.png); }
+
+/*--------------------------------------------------*
+ * Civilizations
+ *--------------------------------------------------*/
+
+.civ.assyrian  { background-image: url(../img/ingame/civs/assyrians.png); }
+.civ.babylonian  { background-image: url(../img/ingame/civs/babylonians.png); }
+.civ.carthaginian  { background-image: url(../img/ingame/civs/carthaginians.png); }
+.civ.choson  { background-image: url(../img/ingame/civs/choson.png); }
+.civ.egyptian  { background-image: url(../img/ingame/civs/egyptians.png); }
+.civ.greek  { background-image: url(../img/ingame/civs/greeks.png); }
+.civ.hittite  { background-image: url(../img/ingame/civs/hittites.png); }
+.civ.lacviet  { background-image: url(../img/ingame/civs/lacviet.png); }
+.civ.macedonian  { background-image: url(../img/ingame/civs/macedonians.png); }
+.civ.minoan  { background-image: url(../img/ingame/civs/minoans.png); }
+.civ.palmyran  { background-image: url(../img/ingame/civs/palmyrans.png); }
+.civ.persian  { background-image: url(../img/ingame/civs/persians.png); }
+.civ.phoenician  { background-image: url(../img/ingame/civs/phoenicians.png); }
+.civ.roman  { background-image: url(../img/ingame/civs/romans.png); }
+.civ.shang  { background-image: url(../img/ingame/civs/shang.png); }
+.civ.sumerian  { background-image: url(../img/ingame/civs/sumerians.png); }
+.civ.yamato  { background-image: url(../img/ingame/civs/yamato.png); }

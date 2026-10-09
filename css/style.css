@@ -1,0 +1,1925 @@
+/*--------------------------------------------------*
+ * Design foundation – theme variables & base styles
+ *--------------------------------------------------*/
+
+
+/* Theme defaults (dark). Light theme can override via [data-theme="light"] */
+
+:root {
+  /* Colors */
+  --color-bg: #171c28;
+  --color-surface: #1f2535;
+  --color-surface-hover: #2a3147;
+
+  --color-subsection: #1b212f;
+  --color-nav: #1f2535;
+
+  --color-banner-accent: #ffcc66;
+
+  --color-highlight: #e6a23c;  
+  --color-accent: #ffcc66;
+
+  --color-text: #d8d8d8;
+  --color-text-note: #999999;
+
+  --color-button: #fdc148;
+  --color-button-hover: #fcb21e;
+  --color-button-text: #1f2535;
+
+  --color-card: #171c28;
+
+  /* Typography */
+   --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+
+  /* Surfaces */
+  --radius-card: 8px;
+
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.20);
+  --shadow-hover: 0 5px 14px rgba(0, 0, 0, 0.14);
+  --shadow-button: 0 2px 6px rgba(0, 0, 0, 0.14);
+  --shadow-details: 0 2px 8px rgba(0, 0, 0, 0.16);
+  --shadow-dropdown: 0 4px 8px rgba(0, 0, 0, 0.18);
+  --shadow-floating: 0 3px 8px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="light"] {
+  /* Light theme overrides */
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-surface-hover: #e8e8e8;
+
+  --color-subsection: #ffffff;
+  --color-nav: #f5f5f5;
+
+  --color-highlight: #8f5f00;
+  --color-accent: #946200;
+
+  --color-text: #111111;
+  --color-text-note: #555555;
+
+  --color-card: #ffffff;
+
+  --color-button: #e0a52f;
+  --color-button-hover: #c98e1e;
+  --color-button-text: #111111;
+
+  --shadow-card: 0 3px 10px rgba(0, 0, 0, 0.10);
+  --shadow-hover: 0 5px 14px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 2px 6px rgba(0, 0, 0, 0.07);
+  --shadow-details: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 4px 8px rgba(0, 0, 0, 0.10);
+  --shadow-floating: 0 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+/*--------------------------------------------------*
+ * Base resets
+ *--------------------------------------------------*/
+
+html {
+  overflow-y: scroll;
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  line-height: var(--line-height-base);
+  margin: 0;
+  padding: 20px;
+  color: var(--color-text);
+}
+
+/*--------------------------------------------------*
+ * Main content wrapper
+ *--------------------------------------------------*/
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/*--------------------------------------------------*
+ * Banner image
+ *--------------------------------------------------*/
+
+.banner-image {
+  width: 100%;
+  max-width: var(--container-max-width);
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 12px;
+}
+
+.rota-avatar {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*--------------------------------------------------*
+ * Typography
+ *--------------------------------------------------*/
+
+h1 {
+  color: var(--color-text);
+  text-align: center;
+}
+
+h2 {
+  color: var(--color-accent);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+h4 {
+  color: var(--color-accent);
+}
+
+h5 {
+  font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/*--------------------------------------------------*
+ * Details / Summary
+ *--------------------------------------------------*/
+
+details {
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  box-shadow: var(--shadow-details);
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: bold;
+  outline: none;
+}
+
+details > summary {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+details > summary:hover {
+  background: var(--color-surface-hover);
+}
+
+details > summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  background: var(--color-surface-hover);
+}
+
+.summary-h2 {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: bold;
+  outline: none;
+}
+
+/*==================================================*
+ * Banner
+ *==================================================*/
+
+.banner {
+  max-width: var(--container-max-width);
+  margin: 0 auto 1.5rem auto;
+  position: relative;
+}
+
+.banner .banner-image {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: block;
+  border-radius: 12px;
+}
+
+.banner-text {
+  position: absolute;
+  left: 2rem;
+  bottom: 1.75rem;
+  z-index: 2;
+  text-align: left;
+  pointer-events: none;
+}
+
+.banner-text h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  text-align: left;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+}
+
+.banner-text p {
+  margin: 0.45rem 0 0;
+  color: var(--color-banner-accent);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: bold;
+  line-height: 1.3;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/*==================================================*
+ * Section Content
+ *==================================================*/
+
+.section > h2 {
+  margin-bottom: 1rem;
+}
+
+/*==================================================*
+ * Cards
+ *==================================================*/
+
+.card {
+  box-sizing: border-box;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* =========================================
+   Intro Card
+   ========================================= */
+
+.intro-card {
+  background: var(--color-surface);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.intro-card p {
+  margin: 0.8rem auto;
+}
+
+.intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-card .rota-avatar {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+
+/* =========================================
+   Intro Instructions
+   ========================================= */
+
+.intro-card h4 {
+  margin: 0.5rem 0 0.65rem;
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.intro-card h4:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.intro-list {
+  margin: 0 auto 1rem;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.intro-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-list li::before {
+  content: "◆";
+  flex: 0 0 auto;
+  color: var(--color-accent);
+  font-size: 0.45rem;
+}
+
+.intro-list li:last-child {
+  margin-bottom: 0;
+}
+
+/*==================================================*
+ * Accessibility
+ *==================================================*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*==================================================*
+ * Sections
+ *==================================================*/
+
+ .section {
+  margin: 1rem 0;
+}
+
+/*==================================================*
+ * Section Headers
+ *==================================================*/
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35px;
+  box-sizing: border-box;
+  padding: 0.55rem 1rem;
+  margin: 0 0 1.5rem;
+  background: var(--color-nav);
+  color: var(--color-accent);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/*==================================================*
+ * Explore
+ *==================================================*/
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: var(--color-surface);
+  padding: 1.5rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border: 1px solid transparent;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.explore-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.explore-icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  object-fit: contain;
+  margin-bottom: 0.9rem;
+}
+
+.explore-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.explore-card p {
+  max-width: 240px;
+  margin: 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/*==================================================*
+ * Community / External Links
+ *==================================================*/
+
+
+.link-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  min-height: 130px;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.link-card-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+}
+
+.link-card span {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/*==================================================*
+ * Button Link
+ *==================================================*/
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0.35rem 0.5rem 0.35rem 0.35rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-surface-hover);
+  border-left: 3px solid var(--color-highlight);
+  border-right: 3px solid var(--color-highlight);
+  border-radius: 7px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: var(--shadow-button);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button-link:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-highlight);
+  color: var(--color-highlight);
+  box-shadow: var(--shadow-hover);
+}
+
+.button-link:active {
+  transform: translateY(0);
+}
+
+/*--------------------------------------------------*
+ * Button Link Icons
+ *--------------------------------------------------*/
+
+.button-link img {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: 0.4rem;
+  padding: 0.3rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.button-link:hover img {
+  border-color: var(--color-highlight);
+  background: var(--color-surface);
+}
+
+.button-link img[src*="mod"] {
+  margin-right: 0.35rem;
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.button-link img[src*="you-tube"] {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+/*==================================================*
+ * Documentation Articles
+ *==================================================*/
+
+.article {
+  margin: 0;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.article-summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 35px;
+  box-sizing: border-box;
+  padding: 0.55rem 1rem;
+  background: var(--color-nav);
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+
+.article-summary::-webkit-details-marker {
+  display: none;
+}
+
+.article-summary::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-right: 0.7rem;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.article[open] > .article-summary::before {
+  transform: rotate(45deg);
+}
+
+.article-summary:hover {
+  background: var(--color-surface-hover);
+}
+
+.article-summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.article[open] > .article-summary {
+  border-bottom: 1px solid var(--color-surface-hover);
+}
+
+/*--------------------------------------------------*
+ * Article Content
+ *--------------------------------------------------*/
+
+.article-content {
+  padding: 1.25rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+/*--------------------------------------------------*
+ * Article Headings
+ *--------------------------------------------------*/
+
+.article-content h3,
+.article-content h4 {
+  color: var(--color-highlight);
+  text-align: left;
+}
+
+.article-content h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.article-content h4 {
+  margin: 1.25rem 0 0.65rem;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.article-content h3:first-child,
+.article-content h4:first-child {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------*
+ * Article Lists
+ *--------------------------------------------------*/
+
+.article-content ul,
+.article-content ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content li::marker {
+  color: var(--color-accent);
+}
+
+.article-content li:last-child {
+  margin-bottom: 0;
+}
+
+.article-content ul ul,
+.article-content ol ol,
+.article-content ul ol,
+.article-content ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*--------------------------------------------------*
+ * Text Utility Classes
+ *--------------------------------------------------*/
+
+.text {
+  margin: 0 0 1rem;
+}
+
+.text.normal {
+  color: var(--color-text);
+}
+
+.text.heading {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.text.bold {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.text.note {
+  color: var(--color-text-note);
+  font-size: 0.95rem;
+}
+
+.aoe2-note {
+  margin: 0.75rem 0 0;
+  text-align: center;
+}
+
+/*--------------------------------------------------*
+ * Strong Emphasis
+ *--------------------------------------------------*/
+
+.article-content strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/*--------------------------------------------------*
+ * Nested "More Infos"
+ *--------------------------------------------------*/
+
+.article-more-infos {
+  margin: 1rem 0 0;
+  padding: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.article-more-infos-summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 0.55rem 0.9rem;
+  background: var(--color-bg);
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+
+.article-more-infos-summary::-webkit-details-marker {
+  display: none;
+}
+
+.article-more-infos-summary::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-right: 0.6rem;
+  border-right: 1.5px solid var(--color-accent);
+  border-bottom: 1.5px solid var(--color-accent);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.article-more-infos[open] > .article-more-infos-summary::before {
+  transform: rotate(45deg);
+}
+
+.article-more-infos-summary:hover {
+  background: var(--color-surface-hover);
+}
+
+.article-more-infos-summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.article-more-infos-content {
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--color-surface-hover);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/*==================================================*
+ * Content Documentation Layout
+ *==================================================*/
+
+.content-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.version-history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/*==================================================*
+ * Current Version Icon
+ *==================================================*/
+
+.current-version-icon {
+  display: block;
+  width: 150px;
+  height: 25px;
+  margin: 0 0 1rem;
+  object-fit: contain;
+}
+
+/*==================================================*
+ * Subsection
+ *==================================================*/
+
+.subsection {
+  background: var(--color-subsection);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subsection ul,
+.subsection ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.subsection li {
+  margin-bottom: 0.5rem;
+}
+
+.subsection li:last-child {
+  margin-bottom: 0;
+}
+
+.subsection.compact {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto 1rem;
+}
+
+.subsection.compact h4:first-child {
+  margin-top: 0;
+}
+
+.subsection.nested {
+  background: var(--color-surface);
+}
+
+/*--------------------------------------------------*
+ * Subsection Icon Lists
+ *--------------------------------------------------*/
+
+.icon-list > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.icon-list > ul > li + li {
+  border-top: 1px solid var(--color-surface-hover);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/*==================================================*
+ * Separator
+ *==================================================*/
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 1rem 0;
+  border: 0;
+  background: var(--color-surface-hover);
+}
+
+/*==================================================*
+ * Tournament Statistics
+ *==================================================*/
+
+.tournament-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85px;
+  padding: 0.75rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-surface-hover);
+  text-align: center;
+}
+
+.tournament-stat-value {
+  color: var(--color-highlight);
+  font-size: 1.45rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.tournament-stat-label {
+  margin-top: 0.25rem;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*==================================================*
+ * Tournament Archive
+ *==================================================*/
+
+
+.button-filter {
+  min-height: 36px;
+  padding: 0.45rem 0.9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button-filter:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-accent);
+}
+
+.button-filter.active {
+  background: var(--color-button);
+  border-color: var(--color-accent);
+  color: var(--color-button-text);
+}
+
+/*==================================================*
+ * Tournament List
+ *==================================================*/
+
+.tournament-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/*==================================================*
+ * Tournament Cards
+ *==================================================*/
+
+.tournament-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-card);
+  border: 1px solid var(--color-surface-hover);
+  overflow: hidden;
+}
+
+/*==================================================*
+ * Tournament Card Header
+ *==================================================*/
+
+.tournament-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-surface-hover);
+}
+
+.tournament-card-title {
+  min-width: 0;
+}
+
+.tournament-card-header h3 {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.tournament-card-date,
+.tournament-card-infos {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.tournament-format {
+  flex-shrink: 0;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-highlight);
+  border-radius: 5px;
+  color: var(--color-highlight);
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/*==================================================*
+ * Tournament Category Container
+ *==================================================*/
+
+.tournament-category {
+  margin: 1rem 0;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.tournament-category .section-header {
+  margin-top: 0;
+}
+
+.tournament-category .tournament-list {
+  margin-top: 1rem;
+}
+
+/*==================================================*
+ * Tournament Card Body
+ *==================================================*/
+
+.tournament-card-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.tournament-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.tournament-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.tournament-detail > div {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.tournament-detail-label {
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.tournament-detail strong {
+  color: var(--color-accent);
+  font-size: 0.95rem;
+}
+
+/*==================================================*
+ * Tournament Links
+ *==================================================*/
+
+.tournament-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.tournament-links-data {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  box-sizing: border-box;
+  padding: 0.4rem 0.7rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 5px;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.tournament-links-data img {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tournament-links-data img[src*="liquipedia"] {
+  margin-right: 0.15rem;
+  width: 23px !important;
+  height: 23px !important;
+}
+
+.tournament-links-data img[src*="challonge"] {
+  margin-right: 0.30rem;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.tournament-links-data img[src*="you-tube"] {
+  margin-right: 0.45rem;
+  width: 21px !important;
+  height: 21px !important;
+}
+
+.tournament-links-data img[src*="twitch"] {
+  margin-right: 0.40rem;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.tournament-links-data:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/*==================================================*
+ * Hidden Filter Items
+ *==================================================*/
+
+.tournament-card.is-hidden,
+.tournament-category.is-hidden {
+  display: none;
+}
+
+/*==================================================*
+ * Maps Grid
+ *==================================================*/
+
+
+.maps-container {
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.maps-container .section-header {
+  margin-top: 0;
+}
+
+.maps-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5rem;
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-surface-hover);
+  text-align: center;
+}
+
+.map-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.map-card-name {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+/*--------------------------------------------------*
+ * Maps Grid Mobile
+ *--------------------------------------------------*/
+
+@media (max-width: 1100px) {
+  .maps-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .maps-container {
+    padding: 0.75rem;
+  }
+
+  .maps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .map-card {
+    padding: 0.4rem;
+  }
+
+  .map-card-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .maps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/*==================================================*
+ * Homepage / General Mobile
+ *==================================================*/
+
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 1rem;
+  }
+
+  .banner .banner-image {
+    border-radius: 8px;
+  }
+
+  .banner-text {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .banner-text h1 {
+    font-size: clamp(1.1rem, 4.5vw, 1.75rem);
+  }
+
+  .banner-text p {
+    font-size: clamp(0.75rem, 2.8vw, 1rem);
+  }
+
+  .section {
+    margin: 2rem 0;
+  }
+
+  .section-header {
+    padding: 0.55rem 0.75rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-card {
+    min-height: 190px;
+  }
+
+  .intro-card {
+    padding: 1.25rem;
+  }
+
+  .link-card-grid {
+    gap: 0.75rem;
+  }
+
+  .link-card {
+    width: 135px;
+    min-height: 120px;
+  }
+
+  .link-card-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer {
+    margin-top: 1rem;
+  }
+
+  .footer-links {
+    gap: 0.3rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .footer-links a {
+    font-size: 0.7rem;
+  }
+
+  .links {
+    gap: 0.3rem;
+  }
+
+  .links a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-text {
+    left: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
+
+/*==================================================*
+ * Documentation Mobile
+ *==================================================*/
+
+@media (max-width: 768px) {
+
+  .article-summary {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .article-content {
+    padding: 1rem;
+  }
+
+  .article-more-infos-summary {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .article-more-infos-content {
+    padding: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-summary {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .article-content {
+    padding: 0.85rem;
+  }
+
+  .article-more-infos-summary {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .article-more-infos-content {
+    padding: 0.8rem;
+  }
+
+  .current-version-icon {
+    width: 130px;
+    height: 25px;
+  }
+}
+
+/*==================================================*
+ * Tournament Mobile
+ *==================================================*/
+
+@media (max-width: 768px) {
+
+  .tournament-category {
+    margin: 1rem 0;
+  }
+
+  .tournament-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .stat-card {
+    min-height: 80px;
+    padding: 0.7rem;
+  }
+
+  .tournament-stat-value {
+    font-size: 1.5rem;
+  }
+
+  [aria-label="Event filters"] > div {
+    gap: 0.4rem;
+  }
+
+  .button-filter {
+    flex: 1 1 auto;
+    min-width: 70px;
+  }
+
+  .tournament-card-header {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .tournament-card-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .tournament-details {
+    align-items: flex-start;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .tournament-links {
+    justify-content: flex-start;
+  }
+
+  .tournament-links-data {
+    flex: 1 1 auto;
+  }
+}
+
+/*==================================================*
+ * Footer
+ *==================================================*/
+
+.footer {
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--color-text);
+}
+
+/*--------------------------------------------------*
+ * Footer Navigation
+ *--------------------------------------------------*/
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1.5rem;
+  padding: 0.45rem 0.75rem;
+  background: var(--color-surface);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.footer-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  opacity: 0.85;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.footer-links span {
+  color: var(--color-accent);
+  opacity: 0.5;
+  font-size: 0.7rem;
+}
+
+/*--------------------------------------------------*
+ * Footer Text
+ *--------------------------------------------------*/
+
+.footer h4 {
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer h5 {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/*--------------------------------------------------*
+ * Footer Links
+ *--------------------------------------------------*/
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.links a {
+  color: var(--color-text);
+  text-decoration: underline;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  opacity: 0.85;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.links span {
+  color: var(--color-accent);
+  opacity: 0.5;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/*--------------------------------------------------*
+ * Footer Text Links
+ *--------------------------------------------------*/
+
+.links-small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.links-small a {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.links-small a:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/*==================================================*
+ * Navigation – Unified Desktop & Mobile
+ *==================================================*/
+
+#load-nav {
+  min-height: 48px;
+}
+
+.nav {
+  position: relative;
+  background: var(--color-nav);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 6px;
+  font-family: var(--font-base);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.menu {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.menu > li {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.menu > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.menu > li > a:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-accent);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-nav);
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 0;
+  min-width: 160px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: var(--shadow-dropdown);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.submenu li a {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 1rem;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.submenu li a:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-accent);
+}
+
+.menu > li:hover > .submenu {
+  display: block;
+}
+
+/*--------------------------------------------------*
+ * Mobile Navigation Button
+ *--------------------------------------------------*/
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------*
+ * Theme Toggle
+ *--------------------------------------------------*/
+
+.theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(80px + 0.2rem);
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.theme-toggle button {
+  width: 40px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-hover);
+  border-radius: 6px;
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-right: 0.2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.6;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.theme-toggle button + button {
+  margin-left: 0.2rem;
+}
+
+.theme-toggle button:hover {
+  background-color: var(--color-bg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.theme-toggle button.active {
+  background-color: var(--color-bg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/*--------------------------------------------------*
+ * Mobile Navigation
+ *--------------------------------------------------*/
+
+@media (max-width: 800px) {
+  #load-nav {
+    min-height: 60px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    min-height: 48px;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: block;
+    width: 100%;
+    height: 44px;
+    min-height: 44px;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 1;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 0.75rem;
+    right: 4.5rem;
+    width: 80px;
+    height: 36px;
+    margin: 0;
+    transform: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*
+   * navigation.js puts .open on #load-nav, not on .nav.
+   * This selector therefore opens the actual menu correctly.
+   */
+
+  #load-nav.open .nav .menu {
+    display: flex;
+  }
+
+  /* Keep compatibility if .open is ever placed directly on .nav */
+
+  .nav.open .menu {
+    display: flex;
+  }
+
+  .menu > li {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .menu > li > a {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    height: auto;
+    padding: 0.65rem 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    background: var(--color-nav);
+    padding: 0 0 0 1rem;
+    box-sizing: border-box;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .menu > li.open > .submenu {
+    display: block;
+  }
+
+  .submenu li a {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 0.55rem 1rem;
+    box-sizing: border-box;
+  }
+}
+
+/*==================================================*
+ * Back to Top Button
+ *==================================================*/
+
+#backToTop {
+  position: fixed;
+  bottom: 45px;
+  right: 20px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--color-accent);
+  color: var(--color-nav);
+  border: none;
+  border-radius: 6px;
+  font-size: 0;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-floating);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  z-index: 9999;
+}
+
+/* Upward chevron */
+#backToTop::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-left: 3px solid currentColor;
+  border-top: 3px solid currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Hover */
+#backToTop:hover {
+  background: var(--color-accent);
+  color: var(--color-nav);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Keyboard focus */
+#backToTop:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
