@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROTA - Home</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script>
+  (function () {
+    const stored = localStorage.getItem('rota-theme');
+    const theme =
+      stored === 'light' || stored === 'dark'
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+  </script>
+</head>
+
+<body>
+
+<!-- Banner Section -->
+
+<section class="banner" aria-label="Rise of the Ancients Community Patch">
+  <img src="./img/rota-banner.png" alt="Community Patch Banner" class="banner-image">
+
+  <div class="banner-text">
+    <h1>Rise of the Ancients</h1>
+    <p>Return of Rome Community</p>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- Nav Menu -->
+<div id="load-nav"></div>
+
+<!-- Load navigation helper -->
+<script src="js/navigation.js"></script>
+
+
+<!-- Archive Introduction -->
+
+<section class="section" aria-labelledby="archive-heading">
+  <div class="card intro-card">
+
+    <img src="./img/rota-avatar.png" alt="ROTA Avatar" class="rota-avatar">
+
+    <h2 id="archive-heading">Rise of the Ancients</h2>
+
+    <p class="text bold">Welcome to our archive and documentation website.</p>    
+    <p class="text bold">Tournaments and Events organization, Community Content and Guides.</p>
+    <p class="text bold">Made by fans, for fans.</p>
+    <hr>
+
+    <p>Rise of the Ancients is an Age of Empires II Definitive Edition - Return of Rome DLC dedicated community.<br>  
+    Feel free to join our Discord Server if you have questions, feedback, or are looking for games.</p>
+
+  </div>
+</section>
+
+
+<!-- Explore -->
+
+<section class="section" aria-labelledby="explore-heading">
+
+  <h2 id="explore-heading" class="section-header">Explore</h2>
+
+  <div class="explore-grid">
+
+    <a class="card explore-card" href="community-patch.html">
+      <img src="./img/icons/cog-wheel.png" alt="" class="explore-icon">
+      <h3>Community Patch</h3>
+      <p>Browse the Patch Notes.</p>
+    </a>
+
+    <a class="card explore-card" href="map-pack.html">
+      <img src="./img/icons/world-sphere.png" alt="" class="explore-icon">
+      <h3>Map Pack</h3>
+      <p>Browse the Maps changes.</p>
+    </a>
+
+    <a class="card explore-card" href="tournaments.html">
+      <img src="./img/icons/trophy.png" alt="" class="explore-icon">
+      <h3>Tournaments</h3>
+      <p>Browse completed Tournaments.</p>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- Community Links -->
+
+<section class="section" aria-labelledby="community-heading">
+
+  <h2 id="community-heading" class="section-header">Join the Community</h2>
+
+  <div class="link-card-grid">
+
+    <a class="card link-card" href="https://discord.gg/XbTJfx9hbp" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/discord.png" alt="" class="link-card-icon">
+      <span>Discord</span>
+    </a>
+
+    <a class="card link-card" href="https://www.youtube.com/channel/UC0FUCk8OxViRKkLdRl3Y_kQ" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/you-tube.png" alt="" class="link-card-icon">
+      <span>YouTube</span>
+    </a>
+
+    <a class="card link-card" href="https://challonge.com/communities/Rise-of-the-Ancients" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/challonge.png" alt="" class="link-card-icon">
+      <span>Challonge</span>
+    </a>
+
+    <a class="card link-card" href="https://steamcommunity.com/chat/invite/M8TMVPUZ" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/steam.png" alt="" class="link-card-icon">
+      <span>Steam Group</span>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- Age of Empires II Links -->
+
+<section class="section" aria-labelledby="aoe2-heading">
+
+  <h2 id="aoe2-heading" class="section-header">Age of Empires II</h2>
+
+  <div class="link-card-grid">
+
+    <a class="card link-card" href="https://www.ageofempires.com/" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/age-of-empires.png" alt="" class="link-card-icon">
+      <span>Official<br>Website</span>
+    </a>
+
+    <a class="card link-card" href="https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/steam.png" alt="" class="link-card-icon">
+      <span>AOE2 DE<br>Steam Store</span>
+    </a>
+
+    <a class="card link-card" href="https://store.steampowered.com/app/2141580/Age_of_Empires_II_Definitive_Edition__Return_of_Rome/" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/steam.png" alt="" class="link-card-icon">
+      <span>ROR DLC<br>Steam Store</span>
+    </a>
+
+    <a class="card link-card" href="https://www.xbox.com/en-us/games/store/age-of-empires-ii-definitive-edition/9n42sssx2mtg" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/xbox.png" alt="" class="link-card-icon">
+      <span>AOE2 DE<br>Xbox Store</span>
+    </a>
+
+    <a class="card link-card" href="https://www.xbox.com/en-US/games/store/age-of-empires-ii-definitive-edition-return-of-rome/9ngddqdncnk2" target="_blank" rel="noopener noreferrer">
+      <img src="./img/social/xbox.png" alt="" class="link-card-icon">
+      <span>ROR DLC<br>Xbox Store</span>
+    </a>
+
+  </div>
+
+  <p class="text note aoe2-note">
+  Bundle options are also available if you want to purchase at a discount.
+  </p>
+
+</section>
+
+<!-- Footer -->
+
+<div id="load-footer"></div>
+
+
+<!-- Script to load nav.html -->
+
+<script>
+fetch("includes/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    const nav = document.getElementById("load-nav");
+    nav.innerHTML = data;
+    nav.classList.add("loaded");
+    if (window.navigation && typeof window.navigation.init === 'function') {
+      window.navigation.init(nav);
+    }
+  });
+</script>
+
+<!-- Script to load footer.html -->
+ 
+<script>
+  fetch('./includes/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('load-footer').innerHTML = data;
+  });
+</script>
+
+<!-- Back to top button -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+</body>
+</html>

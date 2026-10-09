@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROTA - Tournaments</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script>
+  (function () {
+    const stored = localStorage.getItem('rota-theme');
+    const theme =
+      stored === 'light' || stored === 'dark'
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+  </script>
+</head>
+
+<body>
+
+<!-- Banner Section -->
+
+<section class="banner" aria-label="Rise of the Ancients Community Patch">
+  <img src="./img/rota-banner.png" alt="Community Patch Banner" class="banner-image">
+
+  <div class="banner-text">
+    <h1>Rise of the Ancients</h1>
+    <p>Return of Rome Community</p>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- Nav Menu -->
+
+<div id="load-nav"></div>
+
+<!-- Load navigation helper -->
+
+<script src="js/navigation.js"></script>
+
+
+<!-- Tournament Introduction -->
+
+<section class="section" aria-labelledby="tournament-heading">
+
+  <div class="card intro-card">
+
+    <img src="./img/rota-avatar.png" alt="ROTA Avatar" class="rota-avatar">
+
+    <h2 id="tournament-heading">Tournaments & Events</h2>
+
+    <p class="text bold">Browse finished tournaments and events brackets, prize pools, and archived broadcasts.</p>
+
+    <p>Community Sponsored Return of Rome competition since 2023.</p>    
+
+    <hr>
+    
+    <div class="tournament-stats-grid">
+
+      <div class="card stat-card">
+        <span class="tournament-stat-value">$3,775</span>
+        <span class="tournament-stat-label">Total Prize Pool</span>
+      </div>
+
+      <div class="card stat-card">
+        <span class="tournament-stat-value">7</span>
+        <span class="tournament-stat-label">Tournaments</span>
+      </div>
+
+      <div class="card stat-card">
+        <span class="tournament-stat-value">4</span>
+        <span class="tournament-stat-label">Showmatches</span>
+      </div>
+
+      <div class="card stat-card">
+        <span class="tournament-stat-value">4</span>
+        <span class="tournament-stat-label">Leagues</span>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h4>Visit us on YouTube:</h4>
+
+    <a class="button-link" href="https://www.youtube.com/@AoEIIROR-RotACommunity" target="_blank" rel="noopener noreferrer">
+      <img src="img/social/you-tube.png" alt="">
+      Rise of the Ancients Channel
+    </a>
+
+    <p class="text note">If you prefer access to specific events, use the direct links in the list below, if available.</p>
+
+  </div>
+
+</section>
+
+
+<!-- Event Filters -->
+
+<section class="section" aria-labelledby="Event filters">
+
+  <div class="card intro-card">
+
+    <div >
+      <button type="button" class="button-filter active" data-filter="all">All</button>
+      <button type="button" class="button-filter" data-filter="tournament">Tournaments</button>
+      <button type="button" class="button-filter" data-filter="showmatch">Showmatches</button>
+      <button type="button" class="button-filter" data-filter="league">Leagues</button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Tournaments -->
+
+<section class="section tournament-category" data-category="tournament" aria-labelledby="tournaments-heading">
+
+  <h2 id="tournaments-heading" class="section-header">Tournaments</h2>
+
+  <div class="tournament-list">
+
+    <!-- May 2025 - Earth to Iron -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Earth to Iron</h3>
+          <span class="tournament-card-date">May - Jul 2025</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$350</strong>
+            <div>
+              <span class="text note">16 Players - Double Elimination</span>
+            </div>
+          </div>
+
+          <div class="tournament-links">
+
+              <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Earth_To_Iron" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/liquipedia.png" alt="">
+                Liquipedia
+              </a>
+
+              <a class="tournament-links-data" href="https://www.youtube.com/watch?v=LVKXIdoY0Lo&list=PLZczkiwd2f-ivk1wonpW-FOo12tH-vtqU" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/you-tube.png" alt="">
+                VODs Playlist
+              </a>
+              
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Nov 2024 - Mayhem Addicts -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Mayhem Addicts</h3>
+          <span class="tournament-card-date">Oct - Nov 2024</span>
+        </div>
+
+        <span class="tournament-format">2vs2</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$280</strong>
+            <div>
+              <span class="text note">4 Teams - Round Robin</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Mayhem_Addicts" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/liquipedia.png" alt="">
+              Liquipedia
+            </a>
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=Ed_120e-hMM&list=PLZczkiwd2f-gFeG5rCbgqjLBIlVTAt1BZ" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VODs Playlist
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Jul 2024 - Contenders Clash -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Contenders Clash</h3>
+          <span class="tournament-card-date">Jun - Jul 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$200</strong>
+            <div>
+              <span class="text note">21 Players - Double Elimination</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Contenders_Clash" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/liquipedia.png" alt="">
+              Liquipedia
+            </a>
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=tsAMlLaXJx8&list=PLZczkiwd2f-h9YEbS-kePC3HG8OQGXrK8" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VODs Playlist
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Oct 2023 - Mixed Map Pool -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Mixed Map Pool</h3>
+          <span class="tournament-card-date">28 Oct 2023</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$100</strong>
+            <div>
+              <span class="text note">8 Players - BO3 Swiss Format</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Mixed_Map_ROR" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/liquipedia.png" alt="">
+              Liquipedia
+            </a>
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=sVR_ziy0U2w" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VOD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Oct 2023 - Masters of Citadel -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Masters of Citadel</h3>
+          <span class="tournament-card-date">21 - 22 Oct 2023</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$175</strong>
+            <div>
+              <span class="text note">8 Invited High Level Players - Single Elimination</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Masters_of_Citadel" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/liquipedia.png" alt="">
+              Liquipedia
+            </a>
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=9c4EE7J6zbo&list=PLZczkiwd2f-ilO-e8va_2y0kwCBr2IDXt" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VODs Playlist
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Sep 2023 - 1st Championship -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>1st Championship</h3>
+          <span class="tournament-card-date">Sep - Nov 2023</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$650</strong>
+            <div>
+              <span class="text note">40 Players - Round Robin Group Stage - Single Elimination Playoffs</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/Championship_1v1_ROR" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/liquipedia.png" alt="">
+              Liquipedia
+            </a>
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=TNJ8dVneXmo&list=PLZczkiwd2f-iVPBdIgU4zBzAQeGALmQ9o" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VODs Playlist
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Jun 2023 - The Battle Royale 2 -->
+
+    <article class="card tournament-card" data-type="tournament">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>The Battle Royale 2</h3>
+          <span class="tournament-card-date">Jun - Sep 2023</span>
+        </div>
+
+        <span class="tournament-format">2vs2</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$850</strong>
+            <div>
+              <span class="text note">17 Teams - Double Elimination</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://liquipedia.net/ageofempires/The_Battle_Royale/2" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/liquipedia.png" alt="">
+                Liquipedia
+              </a>
+
+              <a class="tournament-links-data" href="https://www.youtube.com/watch?v=23R2u9MvRsc&list=PLZczkiwd2f-gtrXWrZxe016GJzDCeA9vH" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/you-tube.png" alt="">
+                VODs Playlist
+              </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- Showmatches -->
+
+<section class="section tournament-category" data-category="showmatch" aria-labelledby="showmatches-heading">
+
+  <h2 id="showmatches-heading" class="section-header">Showmatches</h2>
+
+  <div class="tournament-list">
+
+    <!-- Oct 2024 - Showmatch El Reinado -->
+
+    <article class="card tournament-card" data-type="showmatch">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Showmatch El Reinado</h3>
+          <span class="tournament-card-date">06 Oct 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$150</strong>
+            <div>
+              <span class="text note">Vertex vs TakeawayBongo28 - BO3 - Match played after the Age of Empires I Finals of the Red Bull Wololo: El Reinado Tournament</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=nbKe020AoZk" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VOD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Oct 2024 - Showmatch El Reinado -->
+
+    <article class="card tournament-card" data-type="showmatch">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Showmatch El Reinado</h3>
+          <span class="tournament-card-date">06 Oct 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$150</strong>
+            <div>
+              <span class="text note">Unrestricted vs VNS_CooL - BO3 - Match played before the Age of Empires I Finals of the Red Bull Wololo: El Reinado Tournament</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=S1pHzlDSYRc" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VOD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- FFA Showmatch - Mega Random -->
+
+    <article class="card tournament-card" data-type="showmatch">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Showmatch Mega Random</h3>
+          <span class="tournament-card-date">20 Oct 2023</span>
+        </div>
+
+        <span class="tournament-format">FFA</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$50</strong>
+            <div>
+              <span class="text note">8 Players FFA extravaganza</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=mPJhZxr4G2s" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VOD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- FFA Showmatch - Land Nomad -->
+
+    <article class="card tournament-card" data-type="showmatch">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Showmatch Land Nomad</h3>
+          <span class="tournament-card-date">20 Oct 2023</span>
+        </div>
+
+        <span class="tournament-format">FFA</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$50</strong>
+            <div>
+              <span class="text note">8 Players FFA extravaganza</span>
+            </div>            
+          </div>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://www.youtube.com/watch?v=T15byLa_sgY" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/you-tube.png" alt="">
+              VOD
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- Leagues -->
+
+<section class="section tournament-category" data-category="league" aria-labelledby="leagues-heading">
+
+  <h2 id="leagues-heading" class="section-header">Leagues</h2>
+
+  <div class="tournament-list">
+
+    <!-- Rise of the Ancients – Season 4 -->
+
+    <article class="card tournament-card" data-type="league">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Rise of the Ancients – Season 4</h3>
+          <span class="tournament-card-date">Jun–Jul 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$250</strong>
+            <div>
+              <span class="text note">21 Players across 3 Divisions</span>
+            </div>            
+          </div>
+
+          <span class="tournament-card-infos">No available VODs</span>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://challonge.com/pv15mdqd" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/challonge.png" alt="">
+              Swordsman Division
+            </a>
+
+            <a class="tournament-links-data" href="https://challonge.com/49jz2xqo" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/challonge.png" alt="">
+              Legion Division
+            </a>
+
+            <a class="tournament-links-data" href="https://challonge.com/ytyd142t" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/challonge.png" alt="">
+              Centurion Division
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Rise of the Ancients – Season 3 -->
+
+    <article class="card tournament-card" data-type="league">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Rise of the Ancients – Season 3</h3>
+          <span class="tournament-card-date">Feb–Apr 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$220</strong>
+            <div>
+              <span class="text note">12 Players across 2 Divisions</span>
+            </div>            
+          </div>
+
+          <span class="tournament-card-infos">No available VODs</span>
+
+          <div class="tournament-links">
+
+              <a class="tournament-links-data" href="https://challonge.com/ltjtkmq0" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/challonge.png" alt="">
+                Legion Division
+              </a>
+
+              <a class="tournament-links-data" href="https://challonge.com/q8r7wunk" target="_blank" rel="noopener noreferrer">
+                <img src="img/social/challonge.png" alt="">
+                Centurion Division
+              </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Rise of the Ancients – Season 2 -->
+
+    <article class="card tournament-card" data-type="league">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Rise of the Ancients – Season 2</h3>
+          <span class="tournament-card-date">Dec-Jan 2024</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$200</strong>
+            <div>
+              <span class="text note">8 Players within 1 Division</span>
+            </div>
+          </div>
+
+          <span class="tournament-card-infos">No available VODs</span>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://challonge.com/g1fj6vg9" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/challonge.png" alt="">
+              Centurion Division
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Rise of the Ancients – Season 1 -->
+
+    <article class="card tournament-card" data-type="league">
+
+      <div class="tournament-card-header">
+        <div class="tournament-card-title">
+          <h3>Rise of the Ancients – Season 1</h3>
+          <span class="tournament-card-date">Nov-Dec 2023</span>
+        </div>
+
+        <span class="tournament-format">1vs1</span>
+      </div>
+
+      <div class="tournament-card-body">
+
+        <div class="tournament-details">
+
+          <div class="tournament-detail">
+            <span class="tournament-detail-label">Prize Pool :</span>
+            <strong>$100</strong>
+            <div>
+              <span class="text note">10 Players within 1 Division</span>
+            </div>            
+          </div>
+
+          <span class="tournament-card-infos">No available VODs</span>
+
+          <div class="tournament-links">
+
+            <a class="tournament-links-data" href="https://challonge.com/xjjdyxn6" target="_blank" rel="noopener noreferrer">
+              <img src="img/social/challonge.png" alt="">
+              Legion Division
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<div id="load-footer"></div>
+
+
+<!-- Script to load nav.html -->
+
+<script>
+fetch("includes/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    const nav = document.getElementById("load-nav");
+    nav.innerHTML = data;
+    nav.classList.add("loaded");
+    if (window.navigation && typeof window.navigation.init === 'function') {
+      window.navigation.init(nav);
+    }
+  });
+</script>
+
+<!-- Script to load footer.html -->
+
+<script>
+  fetch('./includes/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('load-footer').innerHTML = data;
+  });
+</script>
+
+
+<!-- Event Filter -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".button-filter");
+  const tournamentCategories = document.querySelectorAll(".tournament-category");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach(item => item.classList.remove("active"));
+      button.classList.add("active");
+
+      tournamentCategories.forEach(category => {
+        const cards = category.querySelectorAll(".tournament-card");
+        let visibleCards = 0;
+
+        cards.forEach(card => {
+          const visible = filter === "all" || card.dataset.type === filter;
+
+          card.classList.toggle("is-hidden", !visible);
+
+          if (visible) {
+            visibleCards++;
+          }
+        });
+
+        category.classList.toggle("is-hidden", visibleCards === 0);
+      });
+    });
+  });
+});
+</script>
+
+
+<!-- Back to top button -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+</body>
+</html>

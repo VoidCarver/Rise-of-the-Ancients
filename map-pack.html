@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROTA - Map Pack</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script>
+  (function () {
+    const stored = localStorage.getItem('rota-theme');
+    const theme =
+      stored === 'light' || stored === 'dark'
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+  </script>
+</head>
+
+<body>
+
+<!-- Banner Section -->
+
+<section class="banner" aria-label="Rise of the Ancients Community Patch">
+  <img src="./img/rota-banner.png" alt="Community Patch Banner" class="banner-image">
+
+  <div class="banner-text">
+    <h1>Rise of the Ancients</h1>
+    <p>Return of Rome Community</p>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- Nav Menu -->
+
+<div id="load-nav"></div>
+
+<!-- Load navigation helper -->
+
+<script src="js/navigation.js"></script>
+
+
+<!-- Map Pack Introduction -->
+
+<section class="section" aria-labelledby="map-pack-heading">
+
+  <div class="card intro-card">
+
+    <img src="./img/rota-avatar.png" alt="ROTA Avatar" class="rota-avatar">
+
+    <h2 id="map-pack-heading">Map Pack</h2>
+
+    <p class="text bold">Following a lot of tournament and casual games, two observations came to fruition:</p>
+    <p>- Maps were too small in 1vs1 for how agressive the game can be.<br>
+      - Natural Lurable animals (Elephants/Boars) were often too hard to find, or too far.
+    </p>
+
+    <p>The Community Map Pack was created to alleviate those issues.<br>
+    A couple of additional small modifications also made there ways into the change list to make games more fun and balanced.</p>
+
+    <hr>
+
+    <h4>How to get the Mod:</h4>
+
+    <a class="button-link" href="https://www.ageofempires.com/mods/details/208822/" target="_blank" rel="noopener noreferrer">
+      <img src="img/icons/mod.png" alt="">
+      Visit the Mod Page to Subscribe
+    </a>
+
+    <p class="text note">You will need to sign in with your Steam or Xbox account.</p>
+
+    <p class="text bold">The mod can also be found directly in-game by searching for "ROR Community Map Pack".</p>
+
+    <hr>
+
+      <div class="subsection compact">
+
+        <h4>Install Instructions:</h4>
+
+        <p class="text note">- Subscribing to the Mod is the only installation step</p>
+
+        <hr>
+
+        <h4>Loading a Map:</h4>
+
+        <p class="text note">- Proceed as usual by clicking "Location" within the lobby options<br>
+        - Select the new "Custom" option now available in the "Map Style" dropdown<br>
+        - RotA maps will now be available for picking</p>
+
+        <hr>
+
+        <h4>Not Seeing the New Maps:</h4>
+
+        <p class="text note">- Make sure the mod is activated in your mod list.</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- Maps Grid -->
+
+<section class="section">
+
+  <div class="maps-container">
+
+    <h2 class="section-header">20 Maps Included</h2>
+
+    <div class="maps-grid">
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Alliance.png" alt="Alliance" class="map-card-img">
+        <span class="map-card-name">Alliance</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Citadel.png" alt="Citadel" class="map-card-img">
+        <span class="map-card-name">Citadel</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Coastal.png" alt="Coastal" class="map-card-img">
+        <span class="map-card-name">Coastal</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Continental.png" alt="Continental" class="map-card-img">
+        <span class="map-card-name">Continental</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_DarkForest.png" alt="Dark Forest" class="map-card-img">
+        <span class="map-card-name">Dark Forest</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_DesertRidge.png" alt="Desert Ridge" class="map-card-img">
+        <span class="map-card-name">Desert Ridge</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_GoldMountain.png" alt="Gold Mountain" class="map-card-img">
+        <span class="map-card-name">Gold Mountain</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Highland.png" alt="Highland" class="map-card-img">
+        <span class="map-card-name">Highland</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_HillCountry.png" alt="Hill Country" class="map-card-img">
+        <span class="map-card-name">Hill Country</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Inland.png" alt="Inland" class="map-card-img">
+        <span class="map-card-name">Inland</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Insideout.png" alt="Inside Out" class="map-card-img">
+        <span class="map-card-name">Inside Out</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_LargeIslands.png" alt="Large Islands" class="map-card-img">
+        <span class="map-card-name">Large Islands</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Mediterranean.png" alt="Mediterranean" class="map-card-img">
+        <span class="map-card-name">Mediterranean</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Megarandom.png" alt="Mega Random" class="map-card-img">
+        <span class="map-card-name">Mega Random</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_MuddyWaters.png" alt="Muddy Waters" class="map-card-img">
+        <span class="map-card-name">Muddy Waters</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Oasis.png" alt="Oasis" class="map-card-img">
+        <span class="map-card-name">Oasis</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_OceanRing.png" alt="Ocean Ring" class="map-card-img">
+        <span class="map-card-name">Ocean Ring</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Plateaus.png" alt="Plateaus" class="map-card-img">
+        <span class="map-card-name">Plateaus</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Rivers.png" alt="Rivers" class="map-card-img">
+        <span class="map-card-name">Rivers</span>
+      </div>
+
+      <div class="card map-card">
+        <img src="./img/ingame/maps/RotA_Sahara.png" alt="Sahara" class="map-card-img">
+        <span class="map-card-name">Sahara</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Map Pack Content -->
+
+<section class="section">
+
+  <div class="content-details">
+
+    <!-- Currently Live - Version 2.2-->
+
+    <details class="article" open>
+
+      <summary class="article-summary"><span>Version 2.2</span></summary>
+
+      <div class="article-content">
+
+        <img src="./img/icons/currently-live.png" alt="Currently Live" class="current-version-icon">
+
+        <!--General Changes  -->
+
+        <div class="subsection">
+
+          <h4>General Changes</h4>
+
+            <ul>
+              <li>2 Player Size changed from 120x120 to 144x144 (3 Player Size).<br>
+              <span class="text note">(intended to better match the number of players to the map size on a larger 2P map size than the official maps).</span>
+              </li>
+
+              <li>Lurable animals (Elephants/Boars) now spawn closer to players (around 20 tiles).</li>
+
+              <li>Maps without specific changes noted below only use the two changes noted above.</li>
+
+              <li>Mega Random is entirely untouched. It was added to ease selection and avoid swapping to default maps.</li>
+            </ul>
+          
+        </div>
+
+        <!-- Citadel -->
+
+        <div class="subsection">
+
+          <h4>Citadel</h4>
+
+            <ul>
+              <li>Base and surrounding forest generation changed to match the map size change.</li>
+              <li>There should no longer be unconnected walls/forest on the front base.</li>
+              <li>The back of every base should now have a lot more space to build.</li>
+            </ul>
+          
+        </div>
+
+        <!-- Coastal -->
+
+        <div class="subsection">
+
+        <h4>Coastal</h4>
+
+          <ul>
+            <li>Map generation chances are now:<br>
+            1 Island: 80% <span class="text note">(previously 60%).</span><br>
+            2 Islands: 20% <span class="text note">(previously 40%).</span>
+            </li>
+          </ul>
+          
+        </div>
+
+        <!-- Inside Out -->
+
+        <div class="subsection">
+
+          <h4>Inside Out</h4>
+
+            <ul>
+              <li>Deer now always spawn inside the walls and no longer outside in the back.<br>
+              <span class="text note">(previously 50/50% chance to spawn either inside or outside in the back).</span></li>
+            </ul>
+          
+        </div>
+
+        <!-- Muddy Waters -->
+
+        <div class="subsection">
+
+          <h4>Muddy Waters</h4>
+
+          <ul>
+            <li>Each player now starts with 2 Natural Elephants/Boars instead of 1.</li>
+          </ul>
+          
+        </div>
+
+        <!-- Oasis -->
+
+        <div class="subsection">
+
+          <h4>Oasis</h4>
+
+            <ul>
+              <li>Changed secondary Forest size from 7 to 9 land %.</li>
+            </ul>
+          
+        </div>
+
+        <!-- Plateaus -->
+
+        <div class="subsection">
+
+          <h4>Plateaus</h4>
+
+            <ul>
+              <li>Adjusted Player Land for 2 Players on the new 2 Player map size.<br>
+              <span class="text note">(Player Land was way too small with 2 Players on a 3 Player map-like size, resulting in Players being enclosed by wood and the rest of the desert region being a no man's land due to a missing player for generation).</span>
+              </li>
+              <li>Added additional small patches of forest (1 land %) within the desert region on the 2 Player size.</li>
+              <li>The map should now feel a lot more like the original 2 Player version on the default 2 Player Map Size.</li>
+              <li>Fixed a bug from the Official Map where you could "capture" neutral Gold/Stone mines.</li>
+            </ul>
+          
+        </div>
+
+        <!-- Sahara -->
+
+        <div class="subsection">
+
+          <h4>Sahara</h4>
+
+            <ul>
+              <li>Changed secondary Forest size from 3 to 5 land %.</li>
+            </ul>
+          
+        </div>
+
+      </div>
+
+    </details>
+
+    <!-- Version History -->
+
+    <details class="article" open>
+
+      <summary class="article-summary">Changelogs</summary>
+
+      <div class="article-content version-history-content">
+
+
+        <!-- version 2.1 -->
+
+        <details class="article-more-infos">
+
+          <summary class="article-more-infos-summary">Version 2.1 - Jun 2024</summary>
+
+          <div class="article-more-infos-content">
+
+            <!-- New Maps -->
+
+            <div class="subsection nested">
+
+              <h4>New Maps Added</h4>
+
+                <ul>
+                  <li>Alliance - Hill Country - Large Islands<br>
+                  <span class="text note">(Only the 1v1 size and 20 Tiles Elephants/Boars spawn distances were adjusted).</span>
+                  </li>
+
+                  <li>Mega Random<br>
+                  <span class="text note">(This map is entirely untouched. It was added to ease selection and avoid swapping to default maps).</span>
+                  </li>
+                </ul>
+
+            </div>
+
+            <!-- Specific Map Changes -->
+
+            <div class="subsection nested">
+
+              <h4>Specific Map Changes</h4>
+
+                <ul>
+                  <li><strong>Coastal</strong><br>
+                  Map generation chances are now:<br>
+                  1 Island: Increased from 60% -> 80%<br>
+                  2 Islands: Decreased from 40% -> 20%<br>
+                  </li>
+
+                  <li><strong>MuddyWaters</strong><br>
+                  Each player now starts with 2 Natural Elephants/Boars instead of 1.
+                  </li>
+                </ul>
+
+            </div>            
+
+            <!-- Bug Fixes -->
+
+            <div class="subsection nested">
+
+              <h4>Bug Fixes</h4>
+
+                <ul>
+                  <li><strong>Plateaus</strong><br>
+                  Fixed a bug from the Official Map where you could "capture" neutral Gold/Stone mines.
+                  </li>
+                </ul>
+
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <!-- version 1.10 -->
+
+        <details class="article-more-infos">
+
+          <summary class="article-more-infos-summary">Version 1.10 - May 2024</summary>
+
+          <div class="article-more-infos-content">
+
+            <!-- Bug Fixes -->
+
+            <div class="subsection nested">
+
+              <h4>Bug Fixes</h4>
+
+                <ul>
+                  <li>Added a "dummy" file Arabia.rms (Default Official Map) on the aoe2 side so the mod stays active and doesn't have to be reactivated every time you switch back and forth from aoe2 to ROR.</li>
+                </ul>
+
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <!-- version 1.9 -->
+
+        <details class="article-more-infos">
+
+          <summary class="article-more-infos-summary">Version 1.9 - Feb 2024</summary>
+
+          <div class="article-more-infos-content">
+
+            <!-- New Maps -->
+
+            <div class="subsection nested">
+
+              <h4>New Maps Added</h4>
+
+                <ul>
+                  <li>Muddy Waters</li>
+                  <li>Plateaus</li>
+                </ul>
+
+            </div>
+
+          </div>
+
+        </details>
+
+      </div>
+
+    </details>
+
+  </div>
+  
+</section>
+
+
+<!-- Footer -->
+
+<div id="load-footer"></div>
+
+
+<!-- Script to load nav.html -->
+
+<script>
+fetch("includes/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    const nav = document.getElementById("load-nav");
+    nav.innerHTML = data;
+    nav.classList.add("loaded");
+    if (window.navigation && typeof window.navigation.init === 'function') {
+      window.navigation.init(nav);
+    }
+  });
+</script>
+
+
+<!-- Script to load footer.html -->
+
+<script>
+fetch("includes/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("load-footer").innerHTML = data;
+  });
+</script>
+
+
+<!-- Back to top button -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+</div>
+
+</body>
+</html>
